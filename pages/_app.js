@@ -1,7 +1,15 @@
-import '@styles/globals.css'
+import { AnimateSharedLayout } from "framer-motion";
 
-function Application({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import "../styles/styles.css";
 
-export default Application
+const App = ({ Component, pageProps }) => {
+  return (
+    <>
+      <AnimateSharedLayout>
+        <Component {...pageProps} />
+      </AnimateSharedLayout>
+    </>
+  );
+};
+
+export default App;
