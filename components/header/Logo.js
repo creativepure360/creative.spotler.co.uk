@@ -1,9 +1,28 @@
+import { useState } from "react";
 import Link from "next/link";
 
 const Logo = () => {
+  const [logoVisibility, setLogoVisibility] = useState(true);
+
+  const checkScrollHeight = () => {
+    if (window.scrollY > 50) {
+      setLogoVisibility(false);
+    } else {
+      setLogoVisibility(true);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", checkScrollHeight);
+  }
+
   return (
     <>
-      <div className="fixed top-8 left-8">
+      <div
+        className={`fixed top-8 left-8 transition-all duration-300 ${
+          logoVisibility ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Link href={`/`}>
           <a>
             <svg
