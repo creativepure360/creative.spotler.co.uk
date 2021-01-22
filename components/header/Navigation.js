@@ -60,7 +60,7 @@ const Navigation = () => {
             Products
           </a>
         </Link>
-        <Link href={`/tools/template-builder`}>
+        <Link href={`/tools`}>
           <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
             Tools
           </a>
