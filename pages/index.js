@@ -24,7 +24,7 @@ const Index = ({ categories }) => {
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             </p>
-            <Link href="/">
+            <Link href="/" scroll={false}>
               <a className="text-base text-white hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
                 Lorem Ipsum
               </a>
@@ -59,7 +59,7 @@ const Index = ({ categories }) => {
               {title}
             </h3>
             <BlockContent blocks={exerpt} />
-            <Link href={`/categories/${slug}`}>
+            <Link href={`/categories/${slug}`} scroll={false}>
               <a className="text-base text-white hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
                 Learn more
               </a>

@@ -79,7 +79,7 @@ const Header = () => {
               logoVisibility ? "opacity-100" : "opacity-0"
             }`}
           >
-            <Link href={`/`}>
+            <Link href={`/`} scroll={false}>
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,22 +110,22 @@ const Header = () => {
             </Link>
           </div>
           <Nav right width="100%" styles={navStyles}>
-            <Link href={`/products`}>
+            <Link href={`/products`} scroll={false}>
               <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
                 Products
               </a>
             </Link>
-            <Link href={`/`}>
+            <Link href={`/`} scroll={false}>
               <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
                 Tools
               </a>
             </Link>
-            <Link href={`/`}>
+            <Link href={`/`} scroll={false}>
               <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
                 Blog
               </a>
             </Link>
-            <Link href={`/`}>
+            <Link href={`/`} scroll={false}>
               <a className="block font-avant-garde-bold text-floss-pink text-5xl mb-6">
                 New
               </a>

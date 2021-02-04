@@ -21,7 +21,7 @@ const Product = ({ product }) => {
           <div className="mb-2">
             <BlockContent blocks={description} />
           </div>
-          <Link href="">
+          <Link href="/" scroll={false}>
             <a className="text-base text-white hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
               Lorem Ipsum
             </a>
