@@ -26,7 +26,7 @@ const Products = ({ productGroups }) => {
             }}
             transition={{ duration: 1, delay: 0 }}
           >
-            <h1 className="font-avant-garde-bold text-5xl leading-14 mb-8">
+            <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
               Lorem Ipsum Dolor
             </h1>
             <p>
@@ -52,7 +52,7 @@ const Products = ({ productGroups }) => {
                   transition={{ duration: 1, delay: 0.5 }}
                   className="mx-2 mb-4"
                 >
-                  <h2 className="font-avant-garde-bold leading-8 text-4xl mb-3 max-w-2xl">
+                  <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
                     {productType}
                   </h2>
                   <BlockContent blocks={description} />

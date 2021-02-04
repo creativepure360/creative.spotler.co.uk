@@ -26,7 +26,7 @@ const CategoryProducts = ({ category }) => {
             <span className="text-floss-pink uppercase pb-2 text-xs mb-2">
               {type}
             </span>
-            <h3 className="font-avant-garde-bold text-2xl mb-3">{name}</h3>
+            <h3 className="font-avant-garde-bold text-2xl sm:text-3xl mb-3">{name}</h3>
             <BlockContent blocks={exerpt} />
             <Link href={`/products/${slug}`}>
               <a className="text-base text-white hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">

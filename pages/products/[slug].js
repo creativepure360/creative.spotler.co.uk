@@ -32,7 +32,7 @@ const Product = ({ product }) => {
               <span className="text-floss-pink uppercase pb-2 text-lg mb-2">
                 {type}
               </span>
-              <h1 className="font-avant-garde-bold text-5xl leading-14 mt-2 mb-8">
+              <h1 className="font-avant-garde-bold text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">
                 {name}
               </h1>
               <div className="mb-2">

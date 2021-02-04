@@ -9,6 +9,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      boxShadow: {
+        full: "0 0 15px 0 rgba(0,0,0,0.1)",
+      },
       colors: {
         "floss-pink": "#FF00FF",
         "pavilion-purple": "#65008A",
@@ -26,15 +29,16 @@ module.exports = {
         "proxima-regular": ["Proxima Nova Regular", "sans-serif"],
         "proxima-bold": ["Proxima Nova Bold", "sans-serif"],
       },
-      boxShadow: {
-        full: "0 0 15px 0 rgba(0,0,0,0.1)",
-      },
       lineHeight: {
         11: "2.75rem",
         12: "3rem",
         13: "3.25rem",
         14: "3.5rem",
       },
+      spacing: {
+        '100p': '100%',
+        '50p': '50%',
+      }
     },
     outline: {
       pink: "2px solid #FF00FF",

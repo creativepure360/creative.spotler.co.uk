@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Logo = () => {
@@ -12,9 +12,12 @@ const Logo = () => {
     }
   };
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", checkScrollHeight);
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", checkScrollHeight);
+    }
+    return () => window.removeEventListener('scroll', checkScrollHeight);
+  });
 
   return (
     <>

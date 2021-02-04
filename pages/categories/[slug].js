@@ -3,8 +3,8 @@ import groq from "groq";
 
 import Header from "../../components/header/Header";
 import Main from "../../components/main/Main";
-import CategoryDescription from "../../components/main/categories/CategoryDescription";
-import CategoryProducts from "../../components/main/categories/CategoryProducts";
+import CategoryDescription from "../../components/main/CategoryDescription";
+import CategoryProducts from "../../components/main/CategoryProducts";
 import Footer from "../../components/footer/Footer";
 
 const Category = ({ category }) => {
