@@ -1,13 +1,17 @@
-import { AnimateSharedLayout } from "framer-motion";
-
 import "../styles/styles.css";
 
-const App = ({ Component, pageProps }) => {
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+
+const App = ({ Component, pageProps, router }) => {
   return (
     <>
-      <AnimateSharedLayout>
+      <Header />
+      <Main router={router}>
         <Component {...pageProps} />
-      </AnimateSharedLayout>
+      </Main>
+      <Footer />
     </>
   );
 };
