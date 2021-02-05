@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Main = ({ children, router }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scroll({top: 0, behavior: 'smooth'});
+    }, 300)
+  }, [router.route]);
   return (
     <>
       <AnimatePresence exitBeforeEnter>
