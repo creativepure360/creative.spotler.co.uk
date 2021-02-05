@@ -21,13 +21,19 @@ const Product = ({ product }) => {
           <div className="mb-2">
             <BlockContent blocks={description} />
           </div>
-          <Link href="/" scroll={false}>
-            <a className="text-base text-white hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
-              Lorem Ipsum
-            </a>
-          </Link>
+          <a
+            href="https://www.pure360.com/book-a-demo/"
+            target="_blank"
+            className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6"
+          >
+            Book a Demo
+          </a>
         </motion.article>
-        <motion.img variants={childrenVariants} src={urlFor(image)} />
+      </section>
+      <section>
+        <motion.article className="" variants={childrenVariants}>
+        <img className="" src={urlFor(image)} />
+        </motion.article>
       </section>
     </motion.div>
   );

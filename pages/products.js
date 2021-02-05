@@ -11,12 +11,17 @@ const Products = ({ productGroups }) => {
       <section className="mb-20">
         <motion.article variants={childrenVariants}>
           <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
-            Lorem Ipsum Dolor
+            Creative Solutions
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          <p className="font-proxima mb-4">
+            We have years of experience designing solutions for every imaginable
+            scenario. Want to take your new campaign to the next level? We have
+            a solution for that. Need a way to gather data for personalisation?
+            We have a solution for that.
+          </p>
+          <p className="font-avant-garde-bold">
+            But don't just take our word for it. Take a look at the examples
+            here, and get in touch for a custom solution of your own.
           </p>
         </motion.article>
       </section>
@@ -44,7 +49,7 @@ const Products = ({ productGroups }) => {
                   </h3>
                   <BlockContent blocks={exerpt} />
                   <Link href={`/products/${slug}`} scroll={false}>
-                    <a className="text-base text-white hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+                    <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
                       Learn more
                     </a>
                   </Link>

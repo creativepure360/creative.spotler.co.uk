@@ -15,18 +15,17 @@ const Index = ({ categories }) => {
             className="col-span-1 sm:col-span-2"
           >
             <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
-              Lorem
+              Pure360
               <br />
-              Ipsum Dolor.
+              <span className="text-floss-pink">Creative Space.</span>
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Designed as a playground for innovation, here you'll find all the
+              products, tools and updates from the Creative Team at Pure360.
             </p>
-            <Link href="/" scroll={false}>
-              <a className="text-base text-white hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
-                Lorem Ipsum
+            <Link href="/products" scroll={false}>
+              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+                Creative Solutions
               </a>
             </Link>
           </motion.div>
@@ -41,11 +40,12 @@ const Index = ({ categories }) => {
       </section>
       <motion.section variants={childrenVariants} className="mb-12">
         <h2 className="font-avant-garde-bold text-3xl sm:text-4xl text-center mb-3 mx-auto leading-10 max-w-2xl">
-          Lorem ipsum dolor sit amet.
+          We can help you with that.
         </h2>
         <h3 className="font-proxima sm:font-proxima-bold text-lg sm:text-xl text-center leading-6 mx-auto max-w-lg">
-          Mauris pretium magna lectus, id placerat metus sollicitudin id.
-          Interdum et malesuada fames ac ante.
+          Know which part of your business needs some marketing love? We can
+          work with you to target specific areas with our beautiful design and
+          technical skills.
         </h3>
       </motion.section>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,7 +60,7 @@ const Index = ({ categories }) => {
             </h3>
             <BlockContent blocks={exerpt} />
             <Link href={`/categories/${slug}`} scroll={false}>
-              <a className="text-base text-white hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
                 Learn more
               </a>
             </Link>

@@ -28,6 +28,13 @@ const Category = ({ category }) => {
           <BlockContent blocks={description} />
         </motion.article>
       </section>
+      <section>
+        <motion.article variants={childrenVariants} className="mx-2 mb-4">
+          <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
+            Creative Solutions
+          </h2>
+        </motion.article>
+      </section>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {products.map(({ id, name, exerpt, type, slug }) => (
           <motion.article
@@ -43,7 +50,7 @@ const Category = ({ category }) => {
             </h3>
             <BlockContent blocks={exerpt} />
             <Link href={`/products/${slug}`} scroll={false}>
-              <a className="text-base text-white hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
                 Learn more
               </a>
             </Link>
