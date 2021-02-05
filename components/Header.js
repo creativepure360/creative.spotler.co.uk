@@ -55,6 +55,7 @@ const navStyles = {
 
 const Header = () => {
   const [logoVisibility, setLogoVisibility] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const checkScrollHeight = () => {
     if (window.scrollY > 50) {
@@ -109,24 +110,43 @@ const Header = () => {
               </a>
             </Link>
           </div>
-          <Nav right width="100%" styles={navStyles}>
+          <Nav
+            right
+            width="100%"
+            styles={navStyles}
+            isOpen={isOpen}
+            onOpen={() => setIsOpen(true)}
+            onClose={() => setIsOpen(false)}
+          >
             <Link href={`/products`} scroll={false}>
-              <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
+              <a
+                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
+                onClick={() => setIsOpen(false)}
+              >
                 Products
               </a>
             </Link>
             <Link href={`/`} scroll={false}>
-              <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
+              <a
+                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
+                onClick={() => setIsOpen(false)}
+              >
                 Tools
               </a>
             </Link>
             <Link href={`/`} scroll={false}>
-              <a className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250">
+              <a
+                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
+                onClick={() => setIsOpen(false)}
+              >
                 Blog
               </a>
             </Link>
             <Link href={`/`} scroll={false}>
-              <a className="block font-avant-garde-bold text-floss-pink text-5xl mb-6">
+              <a
+                className="block font-avant-garde-bold text-floss-pink text-5xl mb-6"
+                onClick={() => setIsOpen(false)}
+              >
                 New
               </a>
             </Link>
