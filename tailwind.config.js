@@ -29,6 +29,12 @@ module.exports = {
         "proxima-regular": ["Proxima Nova Regular", "sans-serif"],
         "proxima-bold": ["Proxima Nova Bold", "sans-serif"],
       },
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        '4/5': '80%',
+      },
       lineHeight: {
         11: "2.75rem",
         12: "3rem",
