@@ -10,7 +10,7 @@ const Product = ({ product }) => {
   const [{ name, description, type, image, slug }] = product;
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         <motion.article className="mb-16" variants={childrenVariants}>
           <span className="text-floss-pink uppercase pb-2 text-lg mb-2">
             {type}
@@ -30,7 +30,7 @@ const Product = ({ product }) => {
           </a>
         </motion.article>
       </section>
-      <section className="max-w-screen-lg px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         <motion.article
           className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10"
           variants={childrenVariants}

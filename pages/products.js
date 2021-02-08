@@ -8,7 +8,7 @@ import { childrenVariants, parentVariants } from "../variants/variants";
 const Products = ({ productGroups }) => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mb-20 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-20 px-4 sm:px-8">
         <motion.article variants={childrenVariants}>
           <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
             Creative Solutions
@@ -34,7 +34,7 @@ const Products = ({ productGroups }) => {
       </section>
       {productGroups.map(({ id, productType, description, products }) => {
         return (
-          <section key={id} className="max-w-screen-lg px-4 sm:px-8">
+          <section key={id} className="max-w-screen-lg mx-auto px-4 sm:px-8">
             <motion.article variants={childrenVariants} className="mx-2 mb-4">
               <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
                 {productType}

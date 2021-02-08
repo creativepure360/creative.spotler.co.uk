@@ -10,7 +10,7 @@ const Category = ({ category }) => {
   const [{ title, description, icon, products }] = category;
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-16 px-4 sm:px-8 items-center">
+      <section className="max-w-screen-lg mx-auto grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-16 px-4 sm:px-8 items-center">
         <motion.article
           variants={childrenVariants}
           className="col-span-1 mx-auto mb-8 sm:mb-0 bg-contain bg-no-repeat bg-center w-full h-fu pt-50p sm:pt-100p"
@@ -28,14 +28,17 @@ const Category = ({ category }) => {
           <BlockContent blocks={description} />
         </motion.article>
       </section>
-      <section className="max-w-screen-lg px-4 sm:px-8">
-        <motion.article variants={childrenVariants} className="mx-2 mb-4">
-          <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
+      <section>
+        <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
+          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">
             Creative Solutions
           </h2>
+          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
+          Take a look at our Creative solutions below, or get in touch for a custom solution of your own.
+          </h3>
         </motion.article>
       </section>
-      <section className="max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
         {products.map(({ id, name, exerpt, type, slug }) => (
           <motion.article
             variants={childrenVariants}

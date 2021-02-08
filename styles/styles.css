@@ -36,6 +36,19 @@
     @apply font-proxima-bold;
   }
 
+  .creative {
+    background: linear-gradient(to right, #ff00ff 0%, #65008A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .creative::selection {
+    background: #ff00ff;
+    -webkit-text-fill-color: #000;
+  }
+
   .product-example {
     position: relative;
   }
@@ -54,14 +67,19 @@
     position: relative;
   }
 
+  .highlight *::selection {
+    background: #ff00ff;
+    color: #000;
+  }
+
   .highlight:before,
   .highlight:after {
     position: absolute;
     bottom: 0;
-    content: '';
+    content: "";
     height: 0;
     width: 50%;
-    border-bottom: 40px solid #FFF;
+    border-bottom: 40px solid #fff;
   }
 
   .highlight:before {
@@ -75,4 +93,5 @@
     border-left: 0 solid transparent;
     border-right: 40px solid transparent;
   }
+
 }

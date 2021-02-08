@@ -8,16 +8,16 @@ import { childrenVariants, parentVariants } from "../variants/variants";
 const Index = ({ categories }) => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mb-16 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-16 sm:mb-20 px-4 sm:px-8">
         <div className="grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-8 items-center">
           <motion.div
             variants={childrenVariants}
             className="col-span-1 sm:col-span-2"
           >
-            <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
+            <h1 className="font-avant-garde-bold text-5xl sm:text-6xl leading-14 sm:leading-18 mb-4 sm:mb-8">
               Pure360
               <br />
-              Creative Space.
+              <span className="creative">Creative Space.</span>
             </h1>
             <p>
               Designed as a playground for innovation. Here you'll find all the
@@ -33,7 +33,7 @@ const Index = ({ categories }) => {
             variants={childrenVariants}
             className="hidden sm:block col-span-1 mx-auto mb-8 sm:mb-0 bg-contain bg-no-repeat bg-center w-full h-full pt-50p sm:pt-100p"
             style={{
-              backgroundImage: `url('https://cdn.sanity.io/images/w5xsgj13/production/0ea1fdb6d5764564c88a399f376a6e3d36513ec9-84x65.svg`,
+              backgroundImage: `url('https://cdn.sanity.io/images/w5xsgj13/production/dac0cbc0b0e47de41467d32a015724ee84c1e4e7-59x50.svg`,
             }}
           ></motion.div>
         </div>
@@ -50,7 +50,7 @@ const Index = ({ categories }) => {
           </h3>
         </motion.article>
       </section>
-      <section className="max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
         {categories.map(({ id, title, exerpt, slug }) => (
           <motion.article
             variants={childrenVariants}
