@@ -112,7 +112,11 @@ const Header = () => {
           </div>
           <Nav
             right
-            width="100%"
+            width={
+              typeof window !== "undefined" && window.innerWidth < 768
+                ? "100vw"
+                : "50vw"
+            }
             styles={navStyles}
             isOpen={isOpen}
             onOpen={() => setIsOpen(true)}
