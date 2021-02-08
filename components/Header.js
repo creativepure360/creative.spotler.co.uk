@@ -55,6 +55,7 @@ const navStyles = {
 
 const Header = () => {
   const [logoVisibility, setLogoVisibility] = useState(true);
+  const [width, setWidth] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
   const checkScrollHeight = () => {
@@ -70,7 +71,23 @@ const Header = () => {
       window.addEventListener("scroll", checkScrollHeight);
     }
     return () => window.removeEventListener("scroll", checkScrollHeight);
-  });
+  }, []);
+
+  const checkWidth = () => {
+    if (window.innerWidth > 768) {
+      setWidth("50%");
+    } else {
+      setWidth("100%");
+    }
+  };
+
+  useEffect(() => {
+    checkWidth();
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", checkWidth);
+    }
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
   return (
     <>
       <header className="h-36">
@@ -112,11 +129,7 @@ const Header = () => {
           </div>
           <Nav
             right
-            width={
-              typeof window !== "undefined" && window.innerWidth < 768
-                ? "100vw"
-                : "50vw"
-            }
+            width={width}
             styles={navStyles}
             isOpen={isOpen}
             onOpen={() => setIsOpen(true)}
