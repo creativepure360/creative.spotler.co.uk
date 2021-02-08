@@ -93,7 +93,7 @@ const Header = () => {
       <header className="h-36">
         <nav>
           <div
-            className={`fixed top-8 left-8 transition-all duration-300 ${
+            className={`fixed top-8 left-8 z-50 transition-all duration-300 ${
               logoVisibility ? "opacity-100" : "opacity-0"
             }`}
           >
