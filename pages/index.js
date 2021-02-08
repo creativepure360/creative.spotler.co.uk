@@ -33,7 +33,7 @@ const Index = ({ categories }) => {
             variants={childrenVariants}
             className="hidden sm:block col-span-1 mx-auto mb-8 sm:mb-0 bg-contain bg-no-repeat bg-center w-full h-full pt-50p sm:pt-100p"
             style={{
-              backgroundImage: `url('https://cdn.sanity.io/images/w5xsgj13/production/dac0cbc0b0e47de41467d32a015724ee84c1e4e7-59x50.svg`,
+              backgroundImage: `url('https://cdn.sanity.io/images/w5xsgj13/production/dac0cbc0b0e47de41467d32a015724ee84c1e4e7-59x50.svg?w=1000&h=1000&fit=max`,
             }}
           ></motion.div>
         </div>
