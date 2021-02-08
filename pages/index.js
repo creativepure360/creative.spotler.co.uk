@@ -17,10 +17,10 @@ const Index = ({ categories }) => {
             <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
               Pure360
               <br />
-              <span className="text-floss-pink">Creative Space.</span>
+              Creative Space.
             </h1>
             <p>
-              Designed as a playground for innovation, here you'll find all the
+              Designed as a playground for innovation. Here you'll find all the
               products, tools and updates from the Creative Team at Pure360.
             </p>
             <Link href="/products" scroll={false}>
@@ -42,7 +42,7 @@ const Index = ({ categories }) => {
         <h2 className="font-avant-garde-bold text-3xl sm:text-4xl text-center mb-3 mx-auto leading-10 max-w-2xl">
           We can help you with that.
         </h2>
-        <h3 className="font-proxima sm:font-proxima-bold text-lg sm:text-xl text-center leading-6 mx-auto max-w-lg">
+        <h3 className="font-proxima sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg">
           Know which part of your business needs some marketing love? We can
           work with you to target specific areas with our beautiful design and
           technical skills.
