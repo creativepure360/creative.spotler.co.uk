@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 
 const Product = ({ product }) => {
-  const [{ name, description, type, image }] = product;
+  const [{ name, description, type, image, slug }] = product;
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section>
+      <section className="max-w-screen-lg px-4 sm:px-8">
         <motion.article className="mb-16" variants={childrenVariants}>
           <span className="text-floss-pink uppercase pb-2 text-lg mb-2">
             {type}
@@ -30,9 +30,19 @@ const Product = ({ product }) => {
           </a>
         </motion.article>
       </section>
-      <section>
-        <motion.article className="" variants={childrenVariants}>
-        <img className="" src={urlFor(image)} />
+      <section className="max-w-screen-lg px-4 sm:px-8">
+        <motion.article
+          className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10"
+          variants={childrenVariants}
+        >
+          <img className="w-full mx-auto" src={urlFor(image)} />
+          <div className="absolute z-50" style={{ top: 'calc(50% - 22px)', left: 'calc(50% - 62px)' }}>
+            <Link href={`/examples/${slug}`} scroll={false}>
+              <a className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block px-8 py-2">
+                Preview
+              </a>
+            </Link>
+          </div>
         </motion.article>
       </section>
     </motion.div>
@@ -54,7 +64,8 @@ export const getStaticProps = async ({ params }) => {
         name, 
         description,
         "type": productType -> name,
-        image
+        image,
+        "slug": slug.current
     }`
   );
   return {

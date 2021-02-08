@@ -11,7 +11,7 @@ const Main = ({ children, router }) => {
     <>
       <AnimatePresence exitBeforeEnter>
         <motion.main
-          className="max-w-screen-lg mx-auto p-8"
+          className="mx-auto py-8"
           style={{ minHeight: "calc(100vh - 12rem)" }}
           key={router.route}
           exit={{ opacity: 0, transition: { duration: 0.3 } }}

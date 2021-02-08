@@ -8,7 +8,7 @@ import { childrenVariants, parentVariants } from "../variants/variants";
 const Index = ({ categories }) => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="mb-16">
+      <section className="max-w-screen-lg mb-16 px-4 sm:px-8">
         <div className="grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-8 items-center">
           <motion.div
             variants={childrenVariants}
@@ -38,17 +38,19 @@ const Index = ({ categories }) => {
           ></motion.div>
         </div>
       </section>
-      <motion.section variants={childrenVariants} className="mb-12">
-        <h2 className="font-avant-garde-bold text-3xl sm:text-4xl text-center mb-3 mx-auto leading-10 max-w-2xl">
-          We can help you with that.
-        </h2>
-        <h3 className="font-proxima sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg">
-          Know which part of your business needs some marketing love? We can
-          work with you to target specific areas with our beautiful design and
-          technical skills.
-        </h3>
-      </motion.section>
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <section>
+        <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
+          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">
+            We can help you with that.
+          </h2>
+          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
+            Know which part of your business needs some marketing love? We can
+            work with you to target specific areas with our beautiful design and
+            technical skills.
+          </h3>
+        </motion.article>
+      </section>
+      <section className="max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
         {categories.map(({ id, title, exerpt, slug }) => (
           <motion.article
             variants={childrenVariants}

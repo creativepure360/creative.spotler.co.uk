@@ -8,26 +8,33 @@ import { childrenVariants, parentVariants } from "../variants/variants";
 const Products = ({ productGroups }) => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="mb-20">
+      <section className="max-w-screen-lg mb-20 px-4 sm:px-8">
         <motion.article variants={childrenVariants}>
           <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
             Creative Solutions
           </h1>
-          <p className="font-proxima mb-8">
+          <p className="font-proxima">
             We have years of experience designing solutions for every imaginable
             scenario. Want to take your new campaign to the next level? We have
             a solution for that. Need a way to gather data for personalisation?
             We have a solution for that.
           </p>
-          <p className="font-avant-garde-bold">
-            But don't just take our word for it. Take a look at the examples
-            here, and get in touch for a custom solution of your own.
-          </p>
+        </motion.article>
+      </section>
+      <section>
+        <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
+          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">
+          But don't just take our word for it.
+          </h2>
+          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
+          Take a look at the examples
+            below, and get in touch for a custom solution of your own.
+          </h3>
         </motion.article>
       </section>
       {productGroups.map(({ id, productType, description, products }) => {
         return (
-          <section key={id}>
+          <section key={id} className="max-w-screen-lg px-4 sm:px-8">
             <motion.article variants={childrenVariants} className="mx-2 mb-4">
               <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
                 {productType}

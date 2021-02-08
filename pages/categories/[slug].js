@@ -10,7 +10,7 @@ const Category = ({ category }) => {
   const [{ title, description, icon, products }] = category;
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-16 items-center">
+      <section className="max-w-screen-lg grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-16 px-4 sm:px-8 items-center">
         <motion.article
           variants={childrenVariants}
           className="col-span-1 mx-auto mb-8 sm:mb-0 bg-contain bg-no-repeat bg-center w-full h-fu pt-50p sm:pt-100p"
@@ -28,14 +28,14 @@ const Category = ({ category }) => {
           <BlockContent blocks={description} />
         </motion.article>
       </section>
-      <section>
+      <section className="max-w-screen-lg px-4 sm:px-8">
         <motion.article variants={childrenVariants} className="mx-2 mb-4">
           <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
             Creative Solutions
           </h2>
         </motion.article>
       </section>
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
         {products.map(({ id, name, exerpt, type, slug }) => (
           <motion.article
             variants={childrenVariants}
