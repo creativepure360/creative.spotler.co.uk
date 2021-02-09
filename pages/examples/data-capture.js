@@ -15,20 +15,27 @@ const dataCapture = () => {
     }, 3000);
   };
 
+  const handleClose = () => {
+    setPopoverShown(false);
+    setFormShown(false);
+  }
+
   const handleReset = () => {
     setHeadline("Lorem ipsum dolor sit amet");
     setFormShown(true);
     setPopoverShown(true);
-  }
+  };
 
   useEffect(() => {
-    setPopoverShown(true);
+    setTimeout(() => {
+      setPopoverShown(true);
+    }, 3000);
   }, []);
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-16 sm:mb-20 px-4 sm:px-8">
-        {!popoverShown && (
+        {!popoverShown && !formShown && (
           <article>
             <motion.div
               variants={childrenVariants}
@@ -63,7 +70,7 @@ const dataCapture = () => {
                 <div className="col-span-1 flex flex-column flex-wrap items-center">
                   <span
                     className="absolute top-2 right-3 cursor-pointer font-proxima-bold"
-                    onClick={() => setPopoverShown(false)}
+                    onClick={handleClose}
                   >
                     X
                   </span>
@@ -81,7 +88,7 @@ const dataCapture = () => {
                         className="block w-full border-gray-100 border-4 p-2 mb-5"
                         type="text"
                         placeholder="Enter your email address"
-                        value="creative@pure360.com"
+                        value="example@example.com"
                       ></input>
                       <a
                         className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer mb-4 px-8 py-2"
