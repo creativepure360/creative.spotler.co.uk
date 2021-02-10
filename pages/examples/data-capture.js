@@ -60,7 +60,7 @@ const dataCapture = () => {
               className="fixed top-0 left-0 w-full h-full flex flex-column flex-wrap justify-center items-center"
               style={{ zIndex: "9999" }}
             >
-              <div className="relative w-full max-w-4/5 sm:max-w-2xl mx-auto grid gap-0 sm:gap-8 grid-cols-1 sm:grid-cols-2 bg-white border-gray-50 border-4 rounded-lg p-8">
+              <div className="relative w-full max-w-9/10 sm:max-w-2xl mx-auto grid gap-0 sm:gap-8 grid-cols-1 sm:grid-cols-2 bg-white border-gray-50 border-4 rounded-lg p-8">
                 <div
                   className="hidden sm:block col-span-1 bg-no-repeat bg-center bg-cover h-96"
                   style={{
