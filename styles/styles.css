@@ -23,10 +23,6 @@
     src: url("/fonts/ITCAvantGardePro-Bold.otf") format("opentype");
   }
 
-  ::selection {
-    background: #f0f;
-  }
-
   body {
     @apply font-proxima-regular;
     @apply text-lg;
@@ -65,11 +61,6 @@
 
   .highlight {
     position: relative;
-  }
-
-  .highlight *::selection {
-    background: #ff00ff;
-    color: #000;
   }
 
   .highlight:before,
