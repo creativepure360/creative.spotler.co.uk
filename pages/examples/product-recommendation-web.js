@@ -28,72 +28,63 @@ const dataCapture = () => {
           slidesToShow: 1,
         },
       },
-    ]
+    ],
   };
+
+  const products = [
+    {
+      image:
+        "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      name: "Lorem ipsum dolor",
+      description: "Nullam dictum felis",
+      price: "7.99",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      name: "Nulla consequat",
+      description: "Phasellus viverra nulla",
+      price: "11.99",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/934729/pexels-photo-934729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      name: "Donec quam felis",
+      description: "Aenean imperdiet",
+      price: "13.99",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      name: "Quisque rutrum",
+      description: "Etiam ultricies nisi",
+      price: "4.99",
+    },
+  ];
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-14 px-4 sm:px-8">
         <motion.div variants={childrenVariants} className="text-center">
           <Slider {...sliderSettings}>
-            <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
-              <img
-                src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-                className="cursor-pointer mb-3"
-              />
-              <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
-                Lorem ipsum dolor
-              </h2>
-              <p className="text-base mb-3">Nullam dictum felis</p>
-              <p className="font-proxima-bold mb-5">£7.99</p>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2">
-                Learn More
-              </a>
-            </div>
-            <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
-              <img
-                src="https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-                className="cursor-pointer mb-3"
-              />
-              <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
-                Nulla consequat
-              </h2>
-              <p className="text-base mb-3">
-                Phasellus viverra nulla
-              </p>
-              <p className="font-proxima-bold mb-5">£11.99</p>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2">
-                Learn More
-              </a>
-            </div>
-            <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
-              <img
-                src="https://images.pexels.com/photos/934729/pexels-photo-934729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-                className="cursor-pointer mb-3"
-              />
-              <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
-                Donec quam felis
-              </h2>
-              <p className="text-base mb-3">Aenean imperdiet</p>
-              <p className="font-proxima-bold mb-5">£13.99</p>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2">
-                Learn More
-              </a>
-            </div>
-            <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
-              <img
-                src="https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                className="cursor-pointer mb-3"
-              />
-              <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
-              Quisque rutrum
-              </h2>
-              <p className="text-base mb-3">Etiam ultricies nisi</p>
-              <p className="font-proxima-bold mb-5">£4.99</p>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2">
-                Learn More
-              </a>
-            </div>
+            {products.map(({image, name, description, price}) => {
+              return (
+                <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
+                  <img
+                    src={image}
+                    className="cursor-pointer mb-3"
+                  />
+                  <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
+                    {name}
+                  </h2>
+                  <p className="text-base mb-3">{description}</p>
+                  <p className="font-proxima-bold mb-5">£{price}</p>
+                  <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2">
+                    Add To Cart
+                  </a>
+                </div>
+              );
+            })}
           </Slider>
         </motion.div>
       </section>
@@ -102,7 +93,9 @@ const dataCapture = () => {
           <motion.div variants={childrenVariants} className="text-center">
             <a
               className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-2"
-              onClick={() => router.push(router.pathname.replace('examples', 'products'))}
+              onClick={() =>
+                router.push(router.pathname.replace("examples", "products"))
+              }
             >
               Exit Preview
             </a>
