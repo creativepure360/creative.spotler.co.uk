@@ -74,7 +74,7 @@ const countdownTimer = () => {
           <motion.div variants={childrenVariants} className="text-center">
             <a
               className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-2"
-              onClick={() => router.back()}
+              onClick={() => router.push(router.pathname.replace('examples', 'products'))}
             >
               Exit Preview
             </a>
