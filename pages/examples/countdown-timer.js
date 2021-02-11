@@ -1,14 +1,16 @@
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 
 const countdownTimer = () => {
+  const router = useRouter();
 
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
-  
+
   const end = new Date("Jan 1, 2022 00:00:00").getTime();
 
   useEffect(() => {
@@ -16,9 +18,9 @@ const countdownTimer = () => {
       const now = new Date().getTime();
       const distance = end - now;
       setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
-      setHours(Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      ));
+      setHours(
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      );
       setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
       setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
       if (distance < 999) {
@@ -26,17 +28,17 @@ const countdownTimer = () => {
       }
     }, 1000);
     return () => {
-      clearInterval(timer)
-    }
-  }, [])
+      clearInterval(timer);
+    };
+  }, []);
 
   const addLeadingZero = (number = 0) => {
-    return number.toString().padStart(2, '0');
-  }
+    return number.toString().padStart(2, "0");
+  };
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto mb-16 sm:mb-20 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-14 px-4 sm:px-8">
         <motion.article
           variants={childrenVariants}
           className="w-full max-w-9/10 sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-6 sm:p-16"
@@ -66,6 +68,18 @@ const countdownTimer = () => {
             </a>
           </div>
         </motion.article>
+      </section>
+      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
+        <article>
+          <motion.div variants={childrenVariants} className="text-center">
+            <a
+              className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-2"
+              onClick={() => router.back()}
+            >
+              Exit Preview
+            </a>
+          </motion.div>
+        </article>
       </section>
     </motion.div>
   );

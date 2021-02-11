@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 
 const dataCapture = () => {
+  const router = useRouter();
+
   const [popoverShown, setPopoverShown] = useState(false);
   const [headline, setHeadline] = useState("Lorem ipsum dolor sit amet");
   const [formShown, setFormShown] = useState(true);
@@ -18,7 +21,7 @@ const dataCapture = () => {
   const handleClose = () => {
     setPopoverShown(false);
     setFormShown(false);
-  }
+  };
 
   const handleReset = () => {
     setHeadline("Lorem ipsum dolor sit amet");
@@ -29,23 +32,29 @@ const dataCapture = () => {
   useEffect(() => {
     setTimeout(() => {
       setPopoverShown(true);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto mb-16 sm:mb-20 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         {!popoverShown && !formShown && (
           <article>
             <motion.div
               variants={childrenVariants}
-              className="fixed top-0 left-0 w-full h-full flex flex-column flex-wrap justify-center items-center"
+              className="fixed top-0 left-0 w-full h-full flex flex-col flex-wrap justify-center items-center"
             >
               <a
-                className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer mb-4 px-8 py-2"
+                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2 mb-4"
                 onClick={handleReset}
               >
                 Show Popover Again?
+              </a>
+              <a
+                className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-2"
+                onClick={() => router.back()}
+              >
+                Exit Preview
               </a>
             </motion.div>
           </article>
@@ -57,7 +66,7 @@ const dataCapture = () => {
           >
             <motion.div
               variants={childrenVariants}
-              className="fixed top-0 left-0 w-full h-full flex flex-column flex-wrap justify-center items-center"
+              className="fixed top-0 left-0 w-full h-full flex flex-col flex-wrap justify-center items-center"
               style={{ zIndex: "9999" }}
             >
               <div className="relative w-full max-w-9/10 sm:max-w-2xl mx-auto grid gap-0 sm:gap-8 grid-cols-1 sm:grid-cols-2 bg-white border-gray-50 border-4 rounded-lg p-8">
@@ -67,7 +76,7 @@ const dataCapture = () => {
                     backgroundImage: `url('https://images.pexels.com/photos/421129/pexels-photo-421129.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')`,
                   }}
                 ></div>
-                <div className="col-span-1 flex flex-column flex-wrap items-center">
+                <div className="col-span-1 flex flex-col flex-wrap justify-center items-start">
                   <span
                     className="absolute top-2 right-3 cursor-pointer font-proxima-bold"
                     onClick={handleClose}
