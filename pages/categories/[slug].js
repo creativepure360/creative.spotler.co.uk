@@ -53,7 +53,7 @@ const Category = ({ category }) => {
             </h3>
             <BlockContent blocks={exerpt} />
             <Link href={`/products/${slug}`} scroll={false}>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6">
                 Learn more
               </a>
             </Link>

@@ -36,8 +36,6 @@
     background: linear-gradient(to right, #ff00ff 0%, #65008A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 
   .creative::selection {

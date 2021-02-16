@@ -79,7 +79,7 @@ const dataCapture = () => {
                   </h2>
                   <p className="text-base mb-3">{description}</p>
                   <p className="font-proxima-bold mb-5">£{price}</p>
-                  <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2">
+                  <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3">
                     Add To Cart
                   </a>
                 </div>
@@ -89,18 +89,16 @@ const dataCapture = () => {
         </motion.div>
       </section>
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
-        <article>
-          <motion.div variants={childrenVariants} className="text-center">
-            <a
-              className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-2"
-              onClick={() =>
-                router.push(router.pathname.replace("examples", "products"))
-              }
-            >
-              Exit Preview
-            </a>
-          </motion.div>
-        </article>
+        <motion.article variants={childrenVariants} className="text-center">
+          <a
+            className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-3"
+            onClick={() =>
+              router.push(router.pathname.replace("examples", "products"))
+            }
+          >
+            Exit Preview
+          </a>
+        </motion.article>
       </section>
     </motion.div>
   );

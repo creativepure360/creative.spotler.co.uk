@@ -45,13 +45,13 @@ const dataCapture = () => {
               className="fixed top-0 left-0 w-full h-full flex flex-col flex-wrap justify-center items-center"
             >
               <a
-                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-2 mb-4"
+                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3 mb-4"
                 onClick={handleReset}
               >
                 Show Popover Again?
               </a>
               <a
-                className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-2"
+                className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-3"
                 onClick={() => router.push(router.pathname.replace('examples', 'products'))}
               >
                 Exit Preview

@@ -8,10 +8,10 @@ import { childrenVariants, parentVariants } from "../variants/variants";
 const Products = ({ productGroups }) => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto mb-20 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-8 px-4 sm:px-8">
         <motion.article variants={childrenVariants}>
           <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
-            Creative Solutions
+            Products
           </h1>
           <p className="font-proxima">
             We have years of experience designing solutions for every imaginable
@@ -23,7 +23,7 @@ const Products = ({ productGroups }) => {
       </section>
       <section>
         <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
-          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">
+          <h2 className="font-avant-garde-bold text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
           But don't just take our word for it.
           </h2>
           <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
@@ -56,7 +56,7 @@ const Products = ({ productGroups }) => {
                   </h3>
                   <BlockContent blocks={exerpt} />
                   <Link href={`/products/${slug}`} scroll={false}>
-                    <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+                    <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6">
                       Learn more
                     </a>
                   </Link>

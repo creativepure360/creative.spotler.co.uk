@@ -14,18 +14,18 @@ const Index = ({ categories }) => {
             variants={childrenVariants}
             className="col-span-1 sm:col-span-2"
           >
-            <h1 className="font-avant-garde-bold text-5xl sm:text-6xl leading-14 sm:leading-18 mb-4 sm:mb-8">
+            <h1 className="font-avant-garde-bold text-4xl sm:text-6xl leading-10 sm:leading-18 mb-4 sm:mb-8">
               Pure360
               <br />
-              <span className="creative">Creative Space.</span>
+              <span className="creative block py-1">Creative Space.</span>
             </h1>
-            <p>
+            <p className="mb-8">
               Designed as a playground for innovation. Here you'll find all the
               products, tools and updates from the Creative Team at Pure360.
             </p>
             <Link href="/products" scroll={false}>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
-                Creative Solutions
+              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-3">
+                View Our Products
               </a>
             </Link>
           </motion.div>
@@ -40,7 +40,7 @@ const Index = ({ categories }) => {
       </section>
       <section>
         <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
-          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">
+          <h2 className="font-avant-garde-bold text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
             We can help you with that.
           </h2>
           <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
@@ -62,7 +62,7 @@ const Index = ({ categories }) => {
             </h3>
             <BlockContent blocks={exerpt} />
             <Link href={`/categories/${slug}`} scroll={false}>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-2 mt-6">
+              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6">
                 Learn more
               </a>
             </Link>
