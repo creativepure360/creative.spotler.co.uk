@@ -148,23 +148,7 @@ const Header = () => {
                 className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
                 onClick={() => setIsOpen(false)}
               >
-                Tools
-              </a>
-            </Link>
-            <Link href={`/`} scroll={false}>
-              <a
-                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
-                onClick={() => setIsOpen(false)}
-              >
                 Blog
-              </a>
-            </Link>
-            <Link href={`/`} scroll={false}>
-              <a
-                className="block font-avant-garde-bold text-floss-pink text-5xl mb-6"
-                onClick={() => setIsOpen(false)}
-              >
-                New
               </a>
             </Link>
           </Nav>
