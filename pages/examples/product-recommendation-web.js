@@ -6,6 +6,37 @@ import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 import Slider from "react-slick";
 
+const products = [
+  {
+    image:
+      "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    name: "Lorem ipsum dolor",
+    description: "Nullam dictum felis",
+    price: "7.99",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    name: "Nulla consequat",
+    description: "Phasellus viverra nulla",
+    price: "11.99",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/934729/pexels-photo-934729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    name: "Donec quam felis",
+    description: "Aenean imperdiet",
+    price: "13.99",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    name: "Quisque rutrum felis",
+    description: "Etiam ultricies nisi",
+    price: "4.99",
+  },
+];
+
 const dataCapture = () => {
   const router = useRouter();
 
@@ -15,52 +46,24 @@ const dataCapture = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 3,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
-
-  const products = [
-    {
-      image:
-        "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      name: "Lorem ipsum dolor",
-      description: "Nullam dictum felis",
-      price: "7.99",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      name: "Nulla consequat",
-      description: "Phasellus viverra nulla",
-      price: "11.99",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/934729/pexels-photo-934729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      name: "Donec quam felis",
-      description: "Aenean imperdiet",
-      price: "13.99",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      name: "Quisque rutrum",
-      description: "Etiam ultricies nisi",
-      price: "4.99",
-    },
-  ];
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
