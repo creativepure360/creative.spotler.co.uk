@@ -4,6 +4,7 @@ import { childrenVariants, parentVariants } from "../../variants/variants";
 
 const products = [
   {
+    id: 1,
     image:
       "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Lorem ipsum dolor",
@@ -12,6 +13,7 @@ const products = [
     quantity: "1",
   },
   {
+    id: 2,
     image:
       "https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Nulla consequat",
@@ -20,6 +22,7 @@ const products = [
     quantity: "1",
   },
   {
+    id: 3,
     image:
       "https://images.pexels.com/photos/934729/pexels-photo-934729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Donec quam felis",
@@ -28,6 +31,7 @@ const products = [
     quantity: "1",
   },
   {
+    id: 4,
     image:
       "https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Quisque rutrum felis",
@@ -63,11 +67,12 @@ const browseCartAbandonment = () => {
               Price
             </div>
           </motion.div>
-          {products.map(({ image, name, description, quantity, price }) => {
+          {products.map(({ id, image, name, description, quantity, price }) => {
             return (
               <motion.div
                 variants={childrenVariants}
                 className="grid gap-2 sm:gap-4 grid-cols-6 mb-4"
+                key={id}
               >
                 <div className="col-span-1">
                   <img className="w-full" src={image} />

@@ -8,32 +8,40 @@ import Slider from "react-slick";
 
 const products = [
   {
+    id: 1,
     image:
       "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Lorem ipsum dolor",
     description: "Nullam dictum felis",
     price: "7.99",
+    quantity: "1",
   },
   {
+    id: 2,
     image:
       "https://images.pexels.com/photos/2267872/pexels-photo-2267872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Nulla consequat",
     description: "Phasellus viverra nulla",
     price: "11.99",
+    quantity: "1",
   },
   {
+    id: 3,
     image:
       "https://images.pexels.com/photos/934729/pexels-photo-934729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Donec quam felis",
     description: "Aenean imperdiet",
     price: "13.99",
+    quantity: "1",
   },
   {
+    id: 4,
     image:
       "https://images.pexels.com/photos/248469/pexels-photo-248469.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     name: "Quisque rutrum felis",
     description: "Etiam ultricies nisi",
     price: "4.99",
+    quantity: "1",
   },
 ];
 
@@ -70,9 +78,9 @@ const dataCapture = () => {
       <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         <motion.div variants={childrenVariants} className="text-center">
           <Slider {...sliderSettings}>
-            {products.map(({ image, name, description, price }) => {
+            {products.map(({ id, image, name, description, price }) => {
               return (
-                <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
+                <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4" key={id}>
                   <img src={image} className="cursor-pointer mb-3" />
                   <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
                     {name}
