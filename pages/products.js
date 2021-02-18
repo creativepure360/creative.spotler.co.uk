@@ -22,13 +22,16 @@ const Products = ({ productGroups }) => {
         </motion.article>
       </section>
       <section>
-        <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
+        <motion.article
+          variants={childrenVariants}
+          className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16"
+        >
           <h2 className="font-avant-garde-bold text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
-          But don't just take our word for it.
+            But don't just take our word for it.
           </h2>
           <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
-          Take a look at the examples
-            below, and get in touch for a custom solution of your own.
+            Take a look at the examples below, and get in touch for a custom
+            solution of your own.
           </h3>
         </motion.article>
       </section>
