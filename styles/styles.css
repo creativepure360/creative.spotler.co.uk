@@ -32,8 +32,10 @@
     @apply font-proxima-bold;
   }
 
+  /* Creative */
+
   .creative {
-    background: linear-gradient(to right, #ff00ff 0%, #65008A 100%);
+    background: linear-gradient(to right, #ff00ff 0%, #65008a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -56,6 +58,8 @@
     width: 100%;
     height: 100%;
   }
+
+  /* Highlight */
 
   .highlight {
     position: relative;
@@ -83,4 +87,28 @@
     border-right: 40px solid transparent;
   }
 
+  /* Toggle */
+
+  input.toggle:before {
+    content: "";
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+    background-color: white;
+    transition: 0.2s ease-in-out;
+  }
+
+  input.toggle:checked {
+    @apply: bg-pavilion-purple;
+    background-color: #65008a;
+  }
+
+  input.toggle:checked:before {
+    left: 1.25rem;
+  }
 }
