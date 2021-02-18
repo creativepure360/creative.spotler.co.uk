@@ -1,10 +1,11 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 import Slider from "react-slick";
+
+import ExitPreview from "../../components/ExitPreview";
 
 const products = [
   {
@@ -46,8 +47,6 @@ const products = [
 ];
 
 const dataCapture = () => {
-  const router = useRouter();
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -80,7 +79,10 @@ const dataCapture = () => {
           <Slider {...sliderSettings}>
             {products.map(({ id, image, name, description, price }) => {
               return (
-                <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4" key={id}>
+                <div
+                  className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4"
+                  key={id}
+                >
                   <img src={image} className="cursor-pointer mb-3" />
                   <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
                     {name}
@@ -96,18 +98,7 @@ const dataCapture = () => {
           </Slider>
         </motion.div>
       </section>
-      <section>
-        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
-          <a
-            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
-            onClick={() =>
-              router.push(router.pathname.replace("examples", "products"))
-            }
-          >
-            Exit Preview
-          </a>
-        </article>
-      </section>
+      <ExitPreview />
     </motion.div>
   );
 };

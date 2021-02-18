@@ -1,6 +1,7 @@
-import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
+
+import ExitPreview from "../../components/ExitPreview";
 
 const products = [
   {
@@ -42,8 +43,6 @@ const products = [
 ];
 
 const browseCartAbandonment = () => {
-  const router = useRouter();
-
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
@@ -109,18 +108,7 @@ const browseCartAbandonment = () => {
           </motion.div>
         </article>
       </section>
-      <section>
-        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
-          <a
-            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
-            onClick={() =>
-              router.push(router.pathname.replace("examples", "products"))
-            }
-          >
-            Exit Preview
-          </a>
-        </article>
-      </section>
+      <ExitPreview />
     </motion.div>
   );
 };

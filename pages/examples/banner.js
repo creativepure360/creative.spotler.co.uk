@@ -1,7 +1,8 @@
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
+
+import ExitPreview from '../../components/ExitPreview';
 
 const instances = {
   a: {
@@ -31,8 +32,6 @@ const instances = {
 };
 
 const banner = () => {
-  const router = useRouter();
-
   const [instance, setInstance] = useState("a");
 
   return (
@@ -85,18 +84,7 @@ const banner = () => {
           </div>
         </motion.article>
       </section>
-      <section>
-        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
-          <a
-            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
-            onClick={() =>
-              router.push(router.pathname.replace("examples", "products"))
-            }
-          >
-            Exit Preview
-          </a>
-        </article>
-      </section>
+      <ExitPreview />
     </motion.div>
   );
 };
