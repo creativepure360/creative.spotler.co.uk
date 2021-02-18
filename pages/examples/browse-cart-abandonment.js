@@ -42,10 +42,8 @@ const browseCartAbandonment = () => {
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto mb-14 px-4 sm:px-8">
-        <article
-          className="w-full max-w-full sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-4 py-8 sm:p-8"
-        >
+      <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
+        <article className="w-full max-w-full sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-4 py-8 sm:p-8">
           <motion.div variants={childrenVariants} className="mb-8">
             <h2 className="font-avant-garde-bold text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
               Lorem ipsum dolor sit amet
@@ -89,35 +87,34 @@ const browseCartAbandonment = () => {
               </motion.div>
             );
           })}
-          <motion.div variants={childrenVariants} className="text-center sm:text-right">
+          <motion.div
+            variants={childrenVariants}
+            className="text-center sm:text-right"
+          >
             <div className="block sm:inline mr-0 mr-0 sm:mr-6">
-              <a
-                className="text-base text-pavilion-purple bg-white inline-block cursor-pointer px-8 py-3 mt-4"
-              >
+              <a className="text-base text-pavilion-purple bg-white inline-block cursor-pointer px-8 py-3 mt-4">
                 Continue Shopping
               </a>
             </div>
             <div className="block sm:inline">
-              <a
-                className="text-base text-white bg-floss-pink inline-block cursor-pointer px-8 py-3 mt-4"
-              >
+              <a className="text-base text-white bg-floss-pink inline-block cursor-pointer px-8 py-3 mt-4">
                 Back To Cart
               </a>
             </div>
           </motion.div>
         </article>
       </section>
-      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
-        <motion.article variants={childrenVariants} className="text-center">
+      <section>
+        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
           <a
-            className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-3"
+            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
             onClick={() =>
               router.push(router.pathname.replace("examples", "products"))
             }
           >
             Exit Preview
           </a>
-        </motion.article>
+        </article>
       </section>
     </motion.div>
   );

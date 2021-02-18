@@ -37,7 +37,7 @@ const dataCapture = () => {
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         {!popoverShown && !formShown && (
           <article>
             <motion.div
@@ -45,16 +45,10 @@ const dataCapture = () => {
               className="fixed top-0 left-0 w-full h-full flex flex-col flex-wrap justify-center items-center"
             >
               <a
-                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3 mb-4"
+                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
                 onClick={handleReset}
               >
                 Show Popover Again?
-              </a>
-              <a
-                className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-3"
-                onClick={() => router.push(router.pathname.replace('examples', 'products'))}
-              >
-                Exit Preview
               </a>
             </motion.div>
           </article>
@@ -115,6 +109,18 @@ const dataCapture = () => {
             </motion.div>
           </article>
         )}
+      </section>
+      <section>
+        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
+          <a
+            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
+            onClick={() =>
+              router.push(router.pathname.replace("examples", "products"))
+            }
+          >
+            Exit Preview
+          </a>
+        </article>
       </section>
     </motion.div>
   );

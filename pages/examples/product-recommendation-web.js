@@ -67,16 +67,13 @@ const dataCapture = () => {
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto mb-14 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         <motion.div variants={childrenVariants} className="text-center">
           <Slider {...sliderSettings}>
-            {products.map(({image, name, description, price}) => {
+            {products.map(({ image, name, description, price }) => {
               return (
                 <div className="flex flex-col flex-wrap justify-center items-center border-gray-50 border-4 rounded-lg p-4">
-                  <img
-                    src={image}
-                    className="cursor-pointer mb-3"
-                  />
+                  <img src={image} className="cursor-pointer mb-3" />
                   <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
                     {name}
                   </h2>
@@ -91,17 +88,17 @@ const dataCapture = () => {
           </Slider>
         </motion.div>
       </section>
-      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
-        <motion.article variants={childrenVariants} className="text-center">
+      <section>
+        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
           <a
-            className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-3"
+            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
             onClick={() =>
               router.push(router.pathname.replace("examples", "products"))
             }
           >
             Exit Preview
           </a>
-        </motion.article>
+        </article>
       </section>
     </motion.div>
   );

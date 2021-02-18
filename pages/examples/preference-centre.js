@@ -15,14 +15,14 @@ const preferenceCentre = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      className: '',
-      bodyClassName: 'text-pavilion-purple',
-      progressClassName: '',
+      className: "",
+      bodyClassName: "text-pavilion-purple",
+      progressClassName: "",
     });
 
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
-      <section className="max-w-screen-lg mx-auto mb-14 px-4 sm:px-8">
+      <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         <motion.article variants={childrenVariants}>
           <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl sm:text-4xl leading-8 sm:leading-10 mb-6 max-w-2xl">
             Lorem ipsum dolor sit amet
@@ -54,6 +54,7 @@ const preferenceCentre = () => {
                   className="w-full border-gray-100 border-4 p-2 mb-0 sm:mb-5"
                   type="text"
                   placeholder="Enter your first name"
+                  value="John"
                 ></input>
               </label>
             </div>
@@ -64,6 +65,7 @@ const preferenceCentre = () => {
                   className="w-full border-gray-100 border-4 p-2 mb-5"
                   type="text"
                   placeholder="Enter your last name"
+                  value="Smith"
                 ></input>
               </label>
             </div>
@@ -123,17 +125,17 @@ const preferenceCentre = () => {
           </div>
         </motion.article>
       </section>
-      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
-        <motion.article variants={childrenVariants} className="text-center">
+      <section>
+        <article className="fixed bottom-0 w-full bg-pavilion-purple py-8 flex justify-center">
           <a
-            className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block cursor-pointer px-8 py-3"
+            className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
             onClick={() =>
               router.push(router.pathname.replace("examples", "products"))
             }
           >
             Exit Preview
           </a>
-        </motion.article>
+        </article>
       </section>
       <ToastContainer />
     </motion.div>
