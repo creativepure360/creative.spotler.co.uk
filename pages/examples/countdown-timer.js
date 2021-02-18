@@ -62,7 +62,6 @@ const countdownTimer = () => {
             <a
               className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink
              hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
-              onClick={(e) => e.preventDefault()}
             >
               Shop Now
             </a>

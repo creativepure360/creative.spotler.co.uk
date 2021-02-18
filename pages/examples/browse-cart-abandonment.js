@@ -44,7 +44,7 @@ const browseCartAbandonment = () => {
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-14 px-4 sm:px-8">
         <article
-          className={`w-full max-w-9/10 sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-4 sm:p-8`}
+          className="w-full max-w-full sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-4 py-8 sm:p-8"
         >
           <motion.div variants={childrenVariants} className="mb-8">
             <h2 className="font-avant-garde-bold text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
@@ -53,7 +53,7 @@ const browseCartAbandonment = () => {
           </motion.div>
           <motion.div
             variants={childrenVariants}
-            className="grid gap-4 grid-cols-6 mb-4"
+            className="grid gap-2 sm:gap-4 grid-cols-6 mb-4"
           >
             <div className="col-span-4 font-proxima-bold text-white">
               Product
@@ -69,13 +69,13 @@ const browseCartAbandonment = () => {
             return (
               <motion.div
                 variants={childrenVariants}
-                className="grid gap-4 grid-cols-6 mb-4"
+                className="grid gap-2 sm:gap-4 grid-cols-6 mb-4"
               >
                 <div className="col-span-1">
                   <img className="w-full" src={image} />
                 </div>
                 <div className="col-span-3">
-                  <p className="font-proxima-bold text-white text-2xl mb-2">
+                  <p className="font-proxima-bold text-white text-xl sm:text-2xl mb-2">
                     {name}
                   </p>
                   <p className="text-white leading-5">{description}</p>
@@ -89,11 +89,10 @@ const browseCartAbandonment = () => {
               </motion.div>
             );
           })}
-          <motion.div variants={childrenVariants} className="text-right">
-            <div className="block sm:inline mr-0 sm: mr-6">
+          <motion.div variants={childrenVariants} className="text-center sm:text-right">
+            <div className="block sm:inline mr-0 mr-0 sm:mr-6">
               <a
                 className="text-base text-pavilion-purple bg-white inline-block cursor-pointer px-8 py-3 mt-4"
-                onClick={(e) => e.preventDefault()}
               >
                 Continue Shopping
               </a>
@@ -101,7 +100,6 @@ const browseCartAbandonment = () => {
             <div className="block sm:inline">
               <a
                 className="text-base text-white bg-floss-pink inline-block cursor-pointer px-8 py-3 mt-4"
-                onClick={(e) => e.preventDefault()}
               >
                 Back To Cart
               </a>

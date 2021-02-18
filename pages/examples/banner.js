@@ -51,7 +51,6 @@ const banner = () => {
             </p>
             <a
               className={`text-base duration-300 text-white ${instances[instance].ctaBg} hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3`}
-              onClick={(e) => e.preventDefault()}
             >
               {instances[instance].ctaText}
             </a>
