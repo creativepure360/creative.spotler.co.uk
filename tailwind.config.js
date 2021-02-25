@@ -29,12 +29,18 @@ module.exports = {
         "proxima-regular": ["Proxima Nova Regular", "sans-serif"],
         "proxima-bold": ["Proxima Nova Bold", "sans-serif"],
       },
+      height: {
+        "1/5-screen": "20vh",
+        "2/5-screen": "40vh",
+        "3/5-screen": "60vh",
+        "4/5-screen": "80vh",
+      },
       maxWidth: {
-        '1/4': '25%',
-        '1/2': '50%',
-        '3/4': '75%',
-        '4/5': '80%',
-        '9/10': '90%',
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
+        "4/5": "80%",
+        "9/10": "90%",
       },
       lineHeight: {
         11: "2.75rem",
@@ -49,9 +55,9 @@ module.exports = {
         20: "5rem",
       },
       spacing: {
-        '100p': '100%',
-        '50p': '50%',
-      }
+        "100p": "100%",
+        "50p": "50%",
+      },
     },
     outline: {
       pink: "2px solid #FF00FF",
