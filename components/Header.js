@@ -144,14 +144,6 @@ const Header = () => {
               </a>
             </Link>
             <a
-                href="https://www.pure360.com/blog/"
-                target="_blank"
-                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250 outline-none"
-                onClick={() => setIsOpen(false)}
-              >
-                Blog
-              </a>
-            <a
                 href="https://www.pure360.com/contact-us/"
                 target="_blank"
                 className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250 outline-none"
