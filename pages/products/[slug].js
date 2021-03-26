@@ -44,13 +44,13 @@ const Product = ({ product }) => {
           className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10"
           variants={childrenVariants}
         >
-          <img className="w-full mx-auto" style={{filter: "blur(4px)"}}  src={urlFor(image)} />
+          <img className="w-full mx-auto" style={{filter: "blur(3px)"}}  src={urlFor(image)} />
           <div
             className="absolute z-50"
             style={{ top: "calc(50% - 22px)", left: "calc(50% - 62px)" }}
           >
             <Link href={`/examples/${slug}`} scroll={false}>
-              <a className="text-base text-pavilion-purple duration-300 hover:text-white bg-white hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block px-8 py-3">
+              <a className="text-base text-pavilion-purple duration-300 hover:text-white bg-transparent hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block px-8 py-3">
                 Preview
               </a>
             </Link>
