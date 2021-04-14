@@ -63,7 +63,7 @@ const banner = () => {
               className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
               onClick={() => setInstance("a")}
             >
-              Instance A
+              Customer A
             </a>
           </div>
           <div className="block sm:inline mb-4 sm:mx-2">
@@ -71,7 +71,7 @@ const banner = () => {
               className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
               onClick={() => setInstance("b")}
             >
-              Instance B
+              Customer B
             </a>
           </div>
           <div className="block sm:inline mb-4 sm:mx-2">
@@ -79,7 +79,7 @@ const banner = () => {
               className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
               onClick={() => setInstance("c")}
             >
-              Instance C
+              Customer C
             </a>
           </div>
         </motion.article>
