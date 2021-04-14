@@ -4,8 +4,13 @@ const currentYear = date.getFullYear();
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black w-full h-16 flex items-center">
-        <div className="max-w-screen-lg px-12">
+      <footer className="bg-black w-full h-24 sm:h-16 flex items-center">
+        <div className="max-w-screen-lg px-12 flex flex-col sm:flex-row">
+          <img
+            className="w-16 mr-5 mb-3 sm:mb-0"
+            src="https://cdn.sanity.io/images/w5xsgj13/production/a284ebb75d0eeb697e04fe22ce1caafea00966cb-327x63.svg"
+            alt="logo"
+          />
           <p className="text-white text-xs">
             Copyright {currentYear} &bull;{" "}
             <a
