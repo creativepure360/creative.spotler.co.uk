@@ -9,14 +9,14 @@ const custom = () => {
       <section className="max-w-screen-xl mx-auto mb-32 px-4 sm:px-8">
         <motion.article
           variants={childrenVariants}
-          className="border-gray-50 border-4 rounded-lg hidden sm:block"
+          className="border-gray-50 border-4 rounded-lg hidden lg:block"
         >
           <iframe
             className="w-full h-4/5-screen"
             src="https://www.uploadlibrary.com/creativepure360/customer-templates/index.html?customName=Pure360&profileName=creativepure360&templateID=demo"
           ></iframe>
         </motion.article>
-        <motion.article variants={childrenVariants} className="block sm:hidden">
+        <motion.article variants={childrenVariants} className="block lg:hidden">
           <video
             width="640"
             controls
