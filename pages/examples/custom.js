@@ -17,9 +17,15 @@ const custom = () => {
           ></iframe>
         </motion.article>
         <motion.article variants={childrenVariants} className="block sm:hidden">
-          <h2 className="font-avant-garde-bold text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
-            Not available on mobile. Please view on Desktop.
-          </h2>
+          <video
+            width="640"
+            controls
+            autoplay="true"
+            className="mx-auto border-gray-100 border-4"
+          >
+            <source src="https://www.uploadlibrary.com/creativepure360/Creative/pure360-html-demo.mov" />
+            Your browser does not support HTML video.
+          </video>
         </motion.article>
       </section>
       <ExitPreview />
