@@ -7,35 +7,8 @@ import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
-const examples = [
-  {
-    id: 1,
-    img: "http://placehold.jp/601x601.png",
-  },
-  {
-    id: 2,
-    img: "http://placehold.jp/602x602.png",
-  },
-  {
-    id: 3,
-    img: "http://placehold.jp/603x603.png",
-  },
-  {
-    id: 4,
-    img: "http://placehold.jp/604x604.png",
-  },
-  {
-    id: 5,
-    img: "http://placehold.jp/605x605.png",
-  },
-  {
-    id: 6,
-    img: "http://placehold.jp/606x606.png",
-  },
-];
-
 const Product = ({ product }) => {
-  const [{ name, description, type, image, slug }] = product;
+  const [{ name, description, type, image, examples, slug }] = product;
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
@@ -77,13 +50,13 @@ const Product = ({ product }) => {
           <SimpleReactLightbox>
             <SRLWrapper>
               <div className="grid grid-cols-2 lg:grid-cols-3 border-gray-50 border-4 rounded-lg mb-12">
-                {examples.map(({ id, img }) => (
+                {examples.map((example, key) => (
                   <motion.article
                     variants={childrenVariants}
-                    key={id}
+                    key={key}
                     className="m-2"
                   >
-                    <img src={img} />
+                    <img className="w-full mx-auto" src={`${urlFor(example)}`} />
                   </motion.article>
                 ))}
               </div>
@@ -101,11 +74,7 @@ const Product = ({ product }) => {
           className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10"
           variants={childrenVariants}
         >
-          <img
-            className="w-full mx-auto"
-            style={{ filter: "blur(3px)" }}
-            src={urlFor(image)}
-          />
+          <img className="w-full mx-auto" src={`${urlFor(image)}?blur=50`} />
           <div
             className="absolute z-50"
             style={{ top: "calc(50% - 22px)", left: "calc(50% - 62px)" }}
@@ -138,6 +107,7 @@ export const getStaticProps = async ({ params }) => {
         description,
         "type": productType -> name,
         image,
+        examples,
         "slug": slug.current
     }`
   );
