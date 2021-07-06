@@ -5,6 +5,34 @@ import BlockContent from "@sanity/block-content-to-react";
 import { urlFor } from "../../utils/image-url";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
+
+const examples = [
+  {
+    id: 1,
+    img: "http://placehold.jp/601x601.png",
+  },
+  {
+    id: 2,
+    img: "http://placehold.jp/602x602.png",
+  },
+  {
+    id: 3,
+    img: "http://placehold.jp/603x603.png",
+  },
+  {
+    id: 4,
+    img: "http://placehold.jp/604x604.png",
+  },
+  {
+    id: 5,
+    img: "http://placehold.jp/605x605.png",
+  },
+  {
+    id: 6,
+    img: "http://placehold.jp/606x606.png",
+  },
+];
 
 const Product = ({ product }) => {
   const [{ name, description, type, image, slug }] = product;
@@ -39,12 +67,45 @@ const Product = ({ product }) => {
           </div>
         </motion.article>
       </section>
+      {examples.length > 0 && (
+        <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
+          <motion.article variants={childrenVariants} className="mx-2 mb-4">
+            <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
+              Examples
+            </h2>
+          </motion.article>
+          <SimpleReactLightbox>
+            <SRLWrapper>
+              <div className="grid grid-cols-2 lg:grid-cols-3 border-gray-50 border-4 rounded-lg mb-12">
+                {examples.map(({ id, img }) => (
+                  <motion.article
+                    variants={childrenVariants}
+                    key={id}
+                    className="m-2"
+                  >
+                    <img src={img} />
+                  </motion.article>
+                ))}
+              </div>
+            </SRLWrapper>
+          </SimpleReactLightbox>
+        </section>
+      )}
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
+        <motion.article variants={childrenVariants} className="mx-2 mb-4">
+          <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
+            Preview
+          </h2>
+        </motion.article>
         <motion.article
           className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10"
           variants={childrenVariants}
         >
-          <img className="w-full mx-auto" style={{filter: "blur(3px)"}}  src={urlFor(image)} />
+          <img
+            className="w-full mx-auto"
+            style={{ filter: "blur(3px)" }}
+            src={urlFor(image)}
+          />
           <div
             className="absolute z-50"
             style={{ top: "calc(50% - 22px)", left: "calc(50% - 62px)" }}
