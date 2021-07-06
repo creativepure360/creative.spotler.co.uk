@@ -40,30 +40,6 @@ const Product = ({ product }) => {
           </div>
         </motion.article>
       </section>
-      {examples.length > 0 && (
-        <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
-          <motion.article variants={childrenVariants} className="mx-2 mb-4">
-            <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
-              Examples
-            </h2>
-          </motion.article>
-          <SimpleReactLightbox>
-            <SRLWrapper>
-              <div className="grid grid-cols-2 lg:grid-cols-3 border-gray-50 border-4 rounded-lg mb-12">
-                {examples.map((example, key) => (
-                  <motion.article
-                    variants={childrenVariants}
-                    key={key}
-                    className="m-2"
-                  >
-                    <img className="w-full mx-auto" src={`${urlFor(example)}`} />
-                  </motion.article>
-                ))}
-              </div>
-            </SRLWrapper>
-          </SimpleReactLightbox>
-        </section>
-      )}
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         <motion.article variants={childrenVariants} className="mx-2 mb-4">
           <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
@@ -87,6 +63,30 @@ const Product = ({ product }) => {
           </div>
         </motion.article>
       </section>
+      {examples && (
+        <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
+          <motion.article variants={childrenVariants} className="mx-2 mb-4">
+            <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">
+              Examples
+            </h2>
+          </motion.article>
+          <SimpleReactLightbox>
+            <SRLWrapper>
+              <div className="grid grid-cols-2 lg:grid-cols-3 border-gray-50 border-4 rounded-lg p-2 mb-12">
+                {examples.map((example, key) => (
+                  <motion.article
+                    variants={childrenVariants}
+                    key={key}
+                    className="col-span-1 m-4"
+                  >
+                    <img class="w-full cursor-pointer" src={urlFor(example)} />
+                  </motion.article>
+                ))}
+              </div>
+            </SRLWrapper>
+          </SimpleReactLightbox>
+        </section>
+      )}
     </motion.div>
   );
 };
