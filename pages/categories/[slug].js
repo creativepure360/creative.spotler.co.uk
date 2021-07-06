@@ -13,7 +13,7 @@ const Category = ({ category }) => {
       <section className="max-w-screen-lg mx-auto grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-16 px-4 sm:px-8 items-center">
         <motion.article
           variants={childrenVariants}
-          className="col-span-1 mx-auto mb-8 sm:mb-0 bg-contain bg-no-repeat bg-center w-full h-fu pt-50p sm:pt-100p"
+          className="col-span-1 mx-auto mb-8 sm:mb-0 bg-contain bg-no-repeat bg-center w-full pt-50p sm:pt-100p"
           style={{
             backgroundImage: `url(${urlFor(icon)})`,
           }}
