@@ -143,6 +143,14 @@ const Header = () => {
                 Products
               </a>
             </Link>
+            <Link href={`/tools`} scroll={false}>
+              <a
+                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
+                onClick={() => setIsOpen(false)}
+              >
+                Tools
+              </a>
+            </Link>
             <a
                 href="https://www.pure360.com/contact-us/"
                 target="_blank"
