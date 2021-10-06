@@ -1,21 +1,10 @@
-import Link from "next/link";
 import groq from "groq";
 import client from "../client-config";
 import BlockContent from "@sanity/block-content-to-react";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../variants/variants";
 
-const Tools = () => {
-  const tools = [
-    {
-      id: 1,
-      name: "Template Builder",
-      exerpt:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-      url: "https://www.pure360.com",
-    },
-  ];
-
+const Tools = ({tools}) => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-8 px-4 sm:px-8">
@@ -58,14 +47,13 @@ const Tools = () => {
               className="border-gray-50 border-4 rounded-lg p-8 m-2"
             >
               <h3 className="font-avant-garde-bold text-2xl mb-3">{name}</h3>
-              <p>{exerpt}</p>
-              {/* <BlockContent blocks={exerpt} /> */}
+              <BlockContent blocks={exerpt} />
               <a
                 href={url}
                 target="_blank"
                 className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6"
               >
-                Learn more
+                Open tool
               </a>
             </motion.article>
           ))}
@@ -73,6 +61,22 @@ const Tools = () => {
       </section>
     </motion.div>
   );
+};
+
+export const getStaticProps = async () => {
+  const tools = await client.fetch(
+    groq`*[_type == 'tool']
+    {
+      "id": _id,
+      name, 
+      exerpt,
+      url
+    }`
+  );
+  return {
+    props: { tools },
+    revalidate: 1,
+  };
 };
 
 export default Tools;
