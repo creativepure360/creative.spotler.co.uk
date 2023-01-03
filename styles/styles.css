@@ -47,6 +47,7 @@
   body {
     @apply font-greycliff;
     @apply text-lg;
+    @apply text-[#002a4d]
   }
 
   /* Creative */
