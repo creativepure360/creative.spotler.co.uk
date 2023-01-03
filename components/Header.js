@@ -45,9 +45,7 @@ const navStyles = {
     color: "#b8b7ad",
     padding: "0.8em",
   },
-  bmItem: {
-    display: "inline-block",
-  },
+  bmItem: {},
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.5)",
   },
