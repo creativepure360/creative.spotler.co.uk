@@ -95,7 +95,7 @@ const browseCartAbandonment = () => {
             variants={childrenVariants}
             className="text-center sm:text-right"
           >
-            <div className="block sm:inline mr-0 mr-0 sm:mr-6">
+            <div className="block sm:inline mr-0 sm:mr-6">
               <a className="text-base text-[#002a4d] bg-white inline-block cursor-pointer px-8 py-3 mt-4">
                 Continue Shopping
               </a>
