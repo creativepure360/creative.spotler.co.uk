@@ -6,30 +6,47 @@
 @tailwind utilities;
 
 @layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
   @font-face {
-    font-family: "Proxima Nova Regular";
+    font-family: "Greycliff CF";
+    src: url("/fonts/GreycliffCF-Regular.eot");
+    src: url("/fonts/GreycliffCF-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/GreycliffCF-Regular.woff2") format("woff2"), url("/fonts/GreycliffCF-Regular.woff") format("woff");
     font-weight: 400;
-    src: url("/fonts/ProximaNova-Regular.otf") format("opentype");
-  }
-  @font-face {
-    font-family: "Proxima Nova Bold";
-    font-weight: 700;
-    src: url("/fonts/ProximaNova-Bold.otf") format("opentype");
+    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "Avant Garde Pro Bold";
+    font-family: "Greycliff CF";
+    src: url("/fonts/GreycliffCF-RegularOblique.eot");
+    src: url("/fonts/GreycliffCF-RegularOblique.eot?#iefix") format("embedded-opentype"), url("/fonts/GreycliffCF-RegularOblique.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Greycliff CF";
+    src: url("/fonts/GreycliffCF-Bold.eot");
+    src: url("/fonts/GreycliffCF-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/GreycliffCF-Bold.woff2") format("woff2"), url("/fonts/GreycliffCF-Bold.woff") format("woff");
     font-weight: 700;
-    src: url("/fonts/ITCAvantGardePro-Bold.otf") format("opentype");
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Greycliff CF";
+    src: url("/fonts/GreycliffCF-BoldOblique.eot");
+    src: url("/fonts/GreycliffCF-BoldOblique.eot?#iefix") format("embedded-opentype"), url("/fonts/GreycliffCF-BoldOblique.woff2") format("woff2"), url("/fonts/GreycliffCF-BoldOblique.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
   }
 
   body {
-    @apply font-proxima-regular;
+    @apply font-greycliff;
     @apply text-lg;
-  }
-
-  strong {
-    @apply font-proxima-bold;
   }
 
   /* Creative */

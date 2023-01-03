@@ -43,16 +43,16 @@ const countdownTimer = () => {
           className="w-full max-w-9/10 sm:max-w-2xl mx-auto bg-gradient-to-r from-floss-pink to-pavilion-purple rounded-lg p-6 sm:p-16"
         >
           <div className="text-center">
-            <h2 className="font-avant-garde-bold text-white text-3xl sm:text-5xl leading-10 sm:leading-14 mb-4 sm:mb-10">
+            <h2 className="font-greycliff text-white text-3xl sm:text-5xl leading-10 sm:leading-14 mb-4 sm:mb-10">
               Lorem ipsum dolor!
             </h2>
-            <div className="grid grid-cols-4 gap-4 mb-2 font-proxima-bold text-white text-3xl sm:text-6xl md:7xl leading-8 sm:leading-12">
+            <div className="grid grid-cols-4 gap-4 mb-2 font-opensans text-white text-3xl sm:text-6xl md:7xl leading-8 sm:leading-12">
               <div className="col-span-1">{addLeadingZero(days)}</div>
               <div className="col-span-1">{addLeadingZero(hours)}</div>
               <div className="col-span-1">{addLeadingZero(minutes)}</div>
               <div className="col-span-1">{addLeadingZero(seconds)}</div>
             </div>
-            <div className="grid grid-cols-4 gap-4 mb-6 sm:mb-12 font-proxima-bold text-white text-xs sm:text-base uppercase">
+            <div className="grid grid-cols-4 gap-4 mb-6 sm:mb-12 font-opensans text-white text-xs sm:text-base uppercase">
               <div className="col-span-1">Days</div>
               <div className="col-span-1">Hours</div>
               <div className="col-span-1">Minutes</div>

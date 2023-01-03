@@ -42,10 +42,10 @@ const banner = () => {
           className={`w-full max-w-9/10 sm:max-w-2xl mx-auto bg-gradient-to-r ${instances[instance].bg} rounded-lg p-6 sm:p-16`}
         >
           <div className="text-center">
-            <h2 className="font-avant-garde-bold text-white text-3xl sm:text-5xl leading-10 sm:leading-14 mb-4">
+            <h2 className="font-greycliff text-white text-3xl sm:text-5xl leading-10 sm:leading-14 mb-4">
               {instances[instance].heading}
             </h2>
-            <p className="font-proxima text-white mb-8">
+            <p className="font-opensans text-white mb-8">
               {instances[instance].body}
             </p>
             <a

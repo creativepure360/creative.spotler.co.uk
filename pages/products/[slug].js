@@ -14,7 +14,7 @@ const Product = ({ product }) => {
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         <motion.article className="mb-16" variants={childrenVariants}>
           <span className="text-floss-pink uppercase pb-2 text-lg mb-2">{type}</span>
-          <h1 className="font-avant-garde-bold text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">{name}</h1>
+          <h1 className="font-greycliff text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">{name}</h1>
           <div className="mb-8">
             <BlockContent blocks={description} />
           </div>
@@ -32,7 +32,7 @@ const Product = ({ product }) => {
       </section>
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         <motion.article variants={childrenVariants} className="mx-2 mb-4">
-          <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">Preview</h2>
+          <h2 className="font-greycliff text-3xl sm:text-4xl mb-3 mx-auto leading-10">Preview</h2>
         </motion.article>
         <motion.article className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10" variants={childrenVariants}>
           <img className="w-full mx-auto" src={`${urlFor(image)}?blur=50`} />
@@ -46,7 +46,7 @@ const Product = ({ product }) => {
       {examples && (
         <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
           <motion.article variants={childrenVariants} className="mx-2 mb-4">
-            <h2 className="font-avant-garde-bold text-3xl sm:text-4xl mb-3 mx-auto leading-10">Examples</h2>
+            <h2 className="font-greycliff text-3xl sm:text-4xl mb-3 mx-auto leading-10">Examples</h2>
           </motion.article>
           <SimpleReactLightbox>
             <SRLWrapper>

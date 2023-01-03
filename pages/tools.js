@@ -9,10 +9,10 @@ const Tools = ({tools}) => {
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-8 px-4 sm:px-8">
         <motion.article variants={childrenVariants}>
-          <h1 className="font-avant-garde-bold text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
+          <h1 className="font-greycliff text-4xl sm:text-5xl leading-12 sm:leading-14 mb-4 sm:mb-8">
             Tools
           </h1>
-          <p className="font-proxima">
+          <p className="font-opensans">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
             commodo ligula eget dolor. Aenean massa. Cum sociis natoque
             penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -29,10 +29,10 @@ const Tools = ({tools}) => {
           variants={childrenVariants}
           className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16"
         >
-          <h2 className="font-avant-garde-bold text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
+          <h2 className="font-greycliff text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
             Lorem ipsum dolor sit amet.
           </h2>
-          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
+          <h3 className="font-opensans text-floss-pink sm:font-opensans text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
             Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
             penatibus et magnis dis parturient montes.
           </h3>
@@ -46,7 +46,7 @@ const Tools = ({tools}) => {
               key={id}
               className="border-gray-50 border-4 rounded-lg p-8 m-2"
             >
-              <h3 className="font-avant-garde-bold text-2xl mb-3">{name}</h3>
+              <h3 className="font-greycliff text-2xl mb-3">{name}</h3>
               <BlockContent blocks={exerpt} />
               <a
                 href={url}

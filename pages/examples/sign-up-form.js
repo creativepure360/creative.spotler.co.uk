@@ -23,7 +23,7 @@ const signUpForm = () => {
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         <motion.article variants={childrenVariants}>
-          <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl sm:text-4xl leading-8 sm:leading-10 mb-6 max-w-2xl">
+          <h2 className="font-greycliff text-pavilion-purple text-2xl sm:text-4xl leading-8 sm:leading-10 mb-6 max-w-2xl">
             Lorem ipsum dolor sit amet
           </h2>
           <p className="mb-6">

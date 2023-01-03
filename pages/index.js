@@ -11,7 +11,7 @@ const Index = ({ categories }) => {
       <section className="max-w-screen-lg mx-auto mb-16 sm:mb-20 px-4 sm:px-8">
         <div className="grid gap-2 sm:gap-10 grid-cols-1 sm:grid-cols-3 mb-8 items-center">
           <motion.div variants={childrenVariants} className="col-span-1 sm:col-span-2">
-            <h1 className="font-avant-garde-bold text-4xl sm:text-6xl leading-10 sm:leading-18 mb-4 sm:mb-8">
+            <h1 className="font-greycliff text-4xl sm:text-6xl leading-10 sm:leading-18 mb-4 sm:mb-8">
               Pure360
               <br />
               <span className="creative block py-1">Creative Space.</span>
@@ -32,14 +32,14 @@ const Index = ({ categories }) => {
       </section>
       <section>
         <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
-          <h2 className="font-avant-garde-bold text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">We can help you with that.</h2>
-          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">Know which part of your business needs some marketing love? We can work with you to target specific areas with our beautiful design and technical skills.</h3>
+          <h2 className="font-greycliff text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">We can help you with that.</h2>
+          <h3 className="font-opensans text-floss-pink text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">Know which part of your business needs some marketing love? We can work with you to target specific areas with our beautiful design and technical skills.</h3>
         </motion.article>
       </section>
       <section className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
         {categories.map(({ id, title, exerpt, slug }) => (
           <motion.article variants={childrenVariants} key={id} className="border-gray-50 border-4 rounded-lg p-8 m-2">
-            <h3 className="font-avant-garde-bold text-2xl sm:text-3xl mb-3">{title}</h3>
+            <h3 className="font-greycliff text-2xl sm:text-3xl mb-3">{title}</h3>
             <BlockContent blocks={exerpt} />
             <Link className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6" href={`/categories/${slug}`} scroll={false}>
               Learn more

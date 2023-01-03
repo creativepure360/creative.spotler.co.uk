@@ -71,12 +71,12 @@ const dataCapture = () => {
                 ></div>
                 <div className="col-span-1 flex flex-col flex-wrap justify-center items-start">
                   <span
-                    className="absolute top-2 right-3 cursor-pointer font-proxima-bold"
+                    className="absolute top-2 right-3 cursor-pointer font-opensans"
                     onClick={handleClose}
                   >
                     X
                   </span>
-                  <h2 className="font-avant-garde-bold text-floss-pink text-3xl leading-10 mb-3">
+                  <h2 className="font-greycliff text-floss-pink text-3xl leading-10 mb-3">
                     {headline}
                   </h2>
                   {formShown && (

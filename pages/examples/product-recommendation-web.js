@@ -84,11 +84,11 @@ const dataCapture = () => {
                   key={id}
                 >
                   <img src={image} className="cursor-pointer mb-3" />
-                  <h2 className="font-avant-garde-bold text-pavilion-purple text-2xl leading-6 cursor-pointer">
+                  <h2 className="font-greycliff text-pavilion-purple text-2xl leading-6 cursor-pointer">
                     {name}
                   </h2>
                   <p className="text-base mb-3">{description}</p>
-                  <p className="font-proxima-bold mb-5">£{price}</p>
+                  <p className="font-opensans mb-5">£{price}</p>
                   <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3">
                     Add To Cart
                   </a>

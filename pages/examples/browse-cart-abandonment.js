@@ -48,7 +48,7 @@ const browseCartAbandonment = () => {
       <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         <article className="w-full max-w-full sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-4 py-8 sm:p-8">
           <motion.div variants={childrenVariants} className="mb-8">
-            <h2 className="font-avant-garde-bold text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
+            <h2 className="font-greycliff text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
               Lorem ipsum dolor sit amet
             </h2>
           </motion.div>
@@ -56,13 +56,13 @@ const browseCartAbandonment = () => {
             variants={childrenVariants}
             className="grid gap-2 sm:gap-4 grid-cols-6 mb-4"
           >
-            <div className="col-span-4 font-proxima-bold text-white">
+            <div className="col-span-4 font-opensans text-white">
               Product
             </div>
-            <div className="col-span-1 font-proxima-bold text-white text-center">
+            <div className="col-span-1 font-opensans text-white text-center">
               Qty
             </div>
-            <div className="col-span-1 font-proxima-bold text-white text-right">
+            <div className="col-span-1 font-opensans text-white text-right">
               Price
             </div>
           </motion.div>
@@ -77,7 +77,7 @@ const browseCartAbandonment = () => {
                   <img className="w-full" src={image} />
                 </div>
                 <div className="col-span-3">
-                  <p className="font-proxima-bold text-white text-xl sm:text-2xl mb-2">
+                  <p className="font-opensans text-white text-xl sm:text-2xl mb-2">
                     {name}
                   </p>
                   <p className="text-white leading-5">{description}</p>
