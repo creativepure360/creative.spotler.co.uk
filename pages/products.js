@@ -15,9 +15,9 @@ const Products = ({ productGroups }) => {
         </motion.article>
       </section>
       <section>
-        <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
-          <h2 className="font-greycliff text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">But don't just take our word for it.</h2>
-          <h3 className="font-opensans text-floss-pink sm:font-opensans text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">Take a look at the examples below, and get in touch for a custom solution of your own.</h3>
+        <motion.article variants={childrenVariants} className="highlight bg-[#23afe6] mb-12 px-4 sm:px-8 py-12 sm:py-16">
+          <h2 className="font-greycliff text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">But don't just take our word for it.</h2>
+          <h3 className="font-opensans text-white sm:font-opensans text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">Take a look at the examples below, and get in touch for a custom solution of your own.</h3>
         </motion.article>
       </section>
       {productGroups.map(({ id, productType, description, products }) => {
@@ -30,10 +30,10 @@ const Products = ({ productGroups }) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
               {products.map(({ id, name, exerpt, type, slug }) => (
                 <motion.article variants={childrenVariants} key={id} className="border-gray-50 border-4 rounded-lg p-8 m-2">
-                  <span className="text-floss-pink uppercase pb-2 text-xs mb-2">{type}</span>
+                  <span className="text-[#002a4d] uppercase pb-2 text-xs mb-2">{type}</span>
                   <h3 className="font-greycliff text-2xl mb-3">{name}</h3>
                   <BlockContent blocks={exerpt} />
-                  <Link className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6" href={`/products/${slug}`} scroll={false}>
+                  <Link className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6" href={`/products/${slug}`} scroll={false}>
                     Learn more
                   </Link>
                 </motion.article>

@@ -13,18 +13,18 @@ const Product = ({ product }) => {
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
         <motion.article className="mb-16" variants={childrenVariants}>
-          <span className="text-floss-pink uppercase pb-2 text-lg mb-2">{type}</span>
+          <span className="text-[#002a4d] uppercase pb-2 text-lg mb-2">{type}</span>
           <h1 className="font-greycliff text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">{name}</h1>
           <div className="mb-8">
             <BlockContent blocks={description} />
           </div>
           <div>
-            <a href="https://www.pure360.com/contact-us/" target="_blank" className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block px-8 py-3 mb-6">
+            <a href="https://www.pure360.com/contact-us/" target="_blank" className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mb-6">
               Contact Us
             </a>
           </div>
           <div>
-            <Link className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3" href={`/products`} scroll={false}>
+            <Link className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3" href={`/products`} scroll={false}>
               Back To Products
             </Link>
           </div>
@@ -37,7 +37,7 @@ const Product = ({ product }) => {
         <motion.article className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10" variants={childrenVariants}>
           <img className="w-full mx-auto" src={`${urlFor(image)}?blur=50`} />
           <div className="absolute z-50" style={{ top: "calc(50% - 22px)", left: "calc(50% - 62px)" }}>
-            <Link className="text-base text-pavilion-purple duration-300 hover:text-white bg-transparent hover:bg-pavilion-purple border-pavilion-purple border-2 inline-block px-8 py-3" href={`/examples/${slug}`} scroll={false}>
+            <Link className="text-base text-pavilion-purple duration-300 hover:text-white bg-transparent hover:bg-[#002a4d] border-pavilion-purple border-2 inline-block px-8 py-3" href={`/examples/${slug}`} scroll={false}>
               Preview
             </Link>
           </div>

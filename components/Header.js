@@ -11,7 +11,7 @@ const navStyles = {
     top: "2rem",
   },
   bmBurgerBars: {
-    background: "#ff00ff",
+    background: "#002a4d",
   },
   bmBurgerBarsHover: {
     background: "#000",
@@ -94,7 +94,7 @@ const Header = () => {
         <nav>
           <div className={`fixed top-8 left-8 z-50 transition-all duration-300 ${logoVisibility ? "opacity-100" : "opacity-0"}`}>
             <Link href={`/`} scroll={false}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="#ff00ff" width="50">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="#002a4d" width="50">
                 <path
                   d="M327.4,699c-0.1-0.1-4.1-0.5-8.8-0.9c-8.7-0.7-10.5-0.9-22.5-2.7c-11.6-1.8-12.3-1.9-19.2-3.5
 				c-18.4-4.2-24.9-5.9-37.3-10.1c-45.4-15.1-86.8-39-122.5-70.7c-35.8-31.8-67.4-74.6-85.7-115.9c-2.7-6.2-5.3-12.1-5.8-13.2
@@ -117,13 +117,13 @@ const Header = () => {
             </Link>
           </div>
           <Nav right width={width} styles={navStyles} isOpen={isOpen} onOpen={() => setIsOpen(true)} onClose={() => setIsOpen(false)}>
-            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-floss-pink transition duration-250" href={`/products`} scroll={false} onClick={() => setIsOpen(false)}>
+            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href={`/products`} scroll={false} onClick={() => setIsOpen(false)}>
               Products
             </Link>
-            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-floss-pink transition duration-250" href={`/tools`} scroll={false} onClick={() => setIsOpen(false)}>
+            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href={`/tools`} scroll={false} onClick={() => setIsOpen(false)}>
               Tools
             </Link>
-            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-floss-pink transition duration-250" href="https://www.pure360.com/contact-us/" onClick={() => setIsOpen(false)}>
+            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href="https://www.pure360.com/contact-us/" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </Nav>

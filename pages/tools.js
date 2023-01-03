@@ -27,12 +27,12 @@ const Tools = ({tools}) => {
       <section>
         <motion.article
           variants={childrenVariants}
-          className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16"
+          className="highlight bg-[#002a4d] mb-12 px-4 sm:px-8 py-12 sm:py-16"
         >
-          <h2 className="font-greycliff text-floss-pink text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
+          <h2 className="font-greycliff text-[#002a4d] text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
             Lorem ipsum dolor sit amet.
           </h2>
-          <h3 className="font-opensans text-floss-pink sm:font-opensans text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
+          <h3 className="font-opensans text-[#002a4d] sm:font-opensans text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
             Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
             penatibus et magnis dis parturient montes.
           </h3>
@@ -51,7 +51,7 @@ const Tools = ({tools}) => {
               <a
                 href={url}
                 target="_blank"
-                className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6"
+                className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6"
               >
                 Open tool
               </a>

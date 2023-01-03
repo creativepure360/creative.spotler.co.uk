@@ -44,7 +44,7 @@ const dataCapture = () => {
               className="fixed top-0 left-0 w-full h-full flex flex-col flex-wrap justify-center items-center"
             >
               <a
-                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
+                className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
                 onClick={handleReset}
               >
                 Show Popover Again?
@@ -76,7 +76,7 @@ const dataCapture = () => {
                   >
                     X
                   </span>
-                  <h2 className="font-greycliff text-floss-pink text-3xl leading-10 mb-3">
+                  <h2 className="font-greycliff text-[#002a4d] text-3xl leading-10 mb-3">
                     {headline}
                   </h2>
                   {formShown && (
@@ -93,7 +93,7 @@ const dataCapture = () => {
                         value="example@example.com"
                       ></input>
                       <a
-                        className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block cursor-pointer mb-4 px-8 py-2"
+                        className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer mb-4 px-8 py-2"
                         onClick={handleSubmit}
                       >
                         Join Newsletter

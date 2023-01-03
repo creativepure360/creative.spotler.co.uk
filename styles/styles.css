@@ -52,13 +52,13 @@
   /* Creative */
 
   .creative {
-    background: linear-gradient(to right, #ff00ff 0%, #65008a 100%);
+    background: linear-gradient(to right, #002a4d 0%, #23afe6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .creative::selection {
-    background: #ff00ff;
+    background: #002a4d;
     -webkit-text-fill-color: #000;
   }
 
@@ -121,7 +121,7 @@
   }
 
   input.toggle:checked {
-    @apply: bg-pavilion-purple;
+    @apply: bg-[#002a4d];
     background-color: #65008a;
   }
 

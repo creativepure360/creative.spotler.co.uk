@@ -115,7 +115,7 @@ const preferenceCentre = () => {
           <div className="grid gap-0 grid-cols-1">
             <div className="col-span-1">
               <a
-                className="text-base text-white duration-300 hover:text-pavilion-purple bg-floss-pink hover:bg-white hover:shadow-full inline-block cursor-pointer px-8 py-3"
+                className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
                 onClick={notify}
               >
                 Submit

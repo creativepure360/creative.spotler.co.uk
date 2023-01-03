@@ -46,7 +46,7 @@ const browseCartAbandonment = () => {
   return (
     <motion.div variants={parentVariants} initial="hidden" animate="visible">
       <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
-        <article className="w-full max-w-full sm:max-w-2xl mx-auto bg-pavilion-purple rounded-lg p-4 py-8 sm:p-8">
+        <article className="w-full max-w-full sm:max-w-2xl mx-auto bg-[#002a4d] rounded-lg p-4 py-8 sm:p-8">
           <motion.div variants={childrenVariants} className="mb-8">
             <h2 className="font-greycliff text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
               Lorem ipsum dolor sit amet
@@ -101,7 +101,7 @@ const browseCartAbandonment = () => {
               </a>
             </div>
             <div className="block sm:inline">
-              <a className="text-base text-white bg-floss-pink inline-block cursor-pointer px-8 py-3 mt-4">
+              <a className="text-base text-white bg-[#002a4d] inline-block cursor-pointer px-8 py-3 mt-4">
                 Back To Cart
               </a>
             </div>

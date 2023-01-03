@@ -14,7 +14,7 @@ const Footer = () => {
           <p className="text-white text-xs">
             Copyright {currentYear} &bull;{" "}
             <a
-              className="duration-300 hover:text-floss-pink hover:underline"
+              className="duration-300 hover:text-[#002a4d] hover:underline"
               href="https://www.pure360.com/cookies"
               target="_blank"
             >
@@ -22,7 +22,7 @@ const Footer = () => {
             </a>{" "}
             &bull;{" "}
             <a
-              className="duration-300 hover:text-floss-pink hover:underline"
+              className="duration-300 hover:text-[#002a4d] hover:underline"
               href="https://www.pure360.com/privacy"
               target="_blank"
             >
@@ -30,7 +30,7 @@ const Footer = () => {
             </a>{" "}
             &bull;{" "}
             <a
-              className="duration-300 hover:text-floss-pink hover:underline"
+              className="duration-300 hover:text-[#002a4d] hover:underline"
               href="https://www.pure360.com/licence-agreement"
               target="_blank"
             >
