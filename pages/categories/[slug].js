@@ -18,44 +18,25 @@ const Category = ({ category }) => {
             backgroundImage: `url(${urlFor(icon)})`,
           }}
         ></motion.article>
-        <motion.article
-          variants={childrenVariants}
-          className="col-span-1 sm:col-span-2"
-        >
-          <h1 className="font-avant-garde-bold text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">
-            {title}
-          </h1>
+        <motion.article variants={childrenVariants} className="col-span-1 sm:col-span-2">
+          <h1 className="font-avant-garde-bold text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">{title}</h1>
           <BlockContent blocks={description} />
         </motion.article>
       </section>
       <section>
         <motion.article variants={childrenVariants} className="highlight bg-pavilion-purple mb-12 px-4 sm:px-8 py-12 sm:py-16">
-          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">
-            Creative Solutions
-          </h2>
-          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">
-          Take a look at our Creative solutions below, or get in touch for a custom solution of your own.
-          </h3>
+          <h2 className="font-avant-garde-bold text-floss-pink text-3xl sm:text-4xl leading-10 text-center mb-3 mx-auto max-w-2xl">Creative Solutions</h2>
+          <h3 className="font-proxima text-floss-pink sm:font-proxima-bold text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">Take a look at our Creative solutions below, or get in touch for a custom solution of your own.</h3>
         </motion.article>
       </section>
       <section className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-8">
         {products.map(({ id, name, exerpt, type, slug }) => (
-          <motion.article
-            variants={childrenVariants}
-            key={id}
-            className="border-gray-50 border-4 rounded-lg p-8 m-2"
-          >
-            <span className="text-floss-pink uppercase pb-2 text-xs mb-2">
-              {type}
-            </span>
-            <h3 className="font-avant-garde-bold text-2xl sm:text-3xl mb-3">
-              {name}
-            </h3>
+          <motion.article variants={childrenVariants} key={id} className="border-gray-50 border-4 rounded-lg p-8 m-2">
+            <span className="text-floss-pink uppercase pb-2 text-xs mb-2">{type}</span>
+            <h3 className="font-avant-garde-bold text-2xl sm:text-3xl mb-3">{name}</h3>
             <BlockContent blocks={exerpt} />
-            <Link href={`/products/${slug}`} scroll={false}>
-              <a className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6">
-                Learn more
-              </a>
+            <Link className="text-base text-white duration-300 hover:text-pavilion-purple bg-pavilion-purple hover:bg-white hover:shadow-full inline-block px-8 py-3 mt-6" href={`/products/${slug}`} scroll={false}>
+              Learn more
             </Link>
           </motion.article>
         ))}

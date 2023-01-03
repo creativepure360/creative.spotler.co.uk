@@ -55,7 +55,7 @@ const navStyles = {
 
 const Header = () => {
   const [logoVisibility, setLogoVisibility] = useState(true);
-  const [width, setWidth] = useState('');
+  const [width, setWidth] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   const checkScrollHeight = () => {
@@ -92,21 +92,11 @@ const Header = () => {
     <>
       <header className="h-36">
         <nav>
-          <div
-            className={`fixed top-8 left-8 z-50 transition-all duration-300 ${
-              logoVisibility ? "opacity-100" : "opacity-0"
-            }`}
-          >
+          <div className={`fixed top-8 left-8 z-50 transition-all duration-300 ${logoVisibility ? "opacity-100" : "opacity-0"}`}>
             <Link href={`/`} scroll={false}>
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 700 700"
-                  fill="#ff00ff"
-                  width="50"
-                >
-                  <path
-                    d="M327.4,699c-0.1-0.1-4.1-0.5-8.8-0.9c-8.7-0.7-10.5-0.9-22.5-2.7c-11.6-1.8-12.3-1.9-19.2-3.5
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="#ff00ff" width="50">
+                <path
+                  d="M327.4,699c-0.1-0.1-4.1-0.5-8.8-0.9c-8.7-0.7-10.5-0.9-22.5-2.7c-11.6-1.8-12.3-1.9-19.2-3.5
 				c-18.4-4.2-24.9-5.9-37.3-10.1c-45.4-15.1-86.8-39-122.5-70.7c-35.8-31.8-67.4-74.6-85.7-115.9c-2.7-6.2-5.3-12.1-5.8-13.2
 				c-4.6-9.5-15-42.7-17.6-56c-0.2-1.1-1-5.4-1.9-9.5c-2.9-14.7-3.6-20-5.2-37c-1.5-16.5-0.8-59.2,1.2-71.1c0.2-1.3,0.6-4.6,0.9-7.4
 				c0.9-7.8,2.3-15.6,5.1-28.5c2.3-10.7,8.8-33.3,11.4-39.5c0.5-1.1,2.5-6.5,4.6-12c5-13.2,18.1-39.8,25-50.8c3-4.9,5.5-9,5.5-9.3
@@ -122,43 +112,20 @@ const Header = () => {
 				c-0.8-0.8-2.6-3.1-4-5c-3.6-4.8-14.3-15.5-20.9-21.1c-23.5-19.5-52.4-32-82.5-35.6c-12.7-1.5-35.9-0.7-48,1.6
 				c-60.3,11.9-107.9,56.6-123.4,116.1c-1,4.1-2.2,9.5-2.6,12c-0.4,2.5-0.9,5.9-1.2,7.5c-1.1,6.3-0.9,31.1,0.3,40
 				c7.3,52.8,38.9,97,85.9,120.4c17.4,8.7,35.5,14.1,52.1,15.7c3.8,0.4,7,0.8,7.2,0.9C338.9,507.4,365.8,506.6,369.6,506.1z"
-                  />
-                </svg>
-              </a>
+                />
+              </svg>
             </Link>
           </div>
-          <Nav
-            right
-            width={width}
-            styles={navStyles}
-            isOpen={isOpen}
-            onOpen={() => setIsOpen(true)}
-            onClose={() => setIsOpen(false)}
-          >
-            <Link href={`/products`} scroll={false}>
-              <a
-                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
-                onClick={() => setIsOpen(false)}
-              >
-                Products
-              </a>
+          <Nav right width={width} styles={navStyles} isOpen={isOpen} onOpen={() => setIsOpen(true)} onClose={() => setIsOpen(false)}>
+            <Link className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250" href={`/products`} scroll={false} onClick={() => setIsOpen(false)}>
+              Products
             </Link>
-            <Link href={`/tools`} scroll={false}>
-              <a
-                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
-                onClick={() => setIsOpen(false)}
-              >
-                Tools
-              </a>
+            <Link className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250" href={`/tools`} scroll={false} onClick={() => setIsOpen(false)}>
+              Tools
             </Link>
-            <a
-                href="https://www.pure360.com/contact-us/"
-                target="_blank"
-                className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </a>
+            <Link className="block font-avant-garde-bold text-black text-5xl mb-6 hover:text-floss-pink transition duration-250" href="https://www.pure360.com/contact-us/" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
           </Nav>
         </nav>
       </header>
