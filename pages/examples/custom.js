@@ -13,7 +13,7 @@ const custom = () => {
         >
           <iframe
             className="w-full h-4/5-screen"
-            src="https://www.uploadlibrary.com/creativepure360/customer-templates/index.html?customName=Pure360&profileName=creativepure360&templateID=demo"
+            src="https://www.uploadlibrary.com/creativepure360/template-builder/index.html"
           ></iframe>
         </motion.article>
         <motion.article variants={childrenVariants} className="block lg:hidden">
