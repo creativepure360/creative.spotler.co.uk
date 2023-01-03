@@ -52,13 +52,13 @@
   /* Creative */
 
   .creative {
-    background: linear-gradient(to right, #002a4d 0%, #23afe6 100%);
+    background: linear-gradient(to right, #002a4d 0%, #942fea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .creative::selection {
-    background: #002a4d;
+    background: #942fea;
     -webkit-text-fill-color: #000;
   }
 

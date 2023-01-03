@@ -43,7 +43,7 @@ module.exports = {
       },
     },
     outline: {
-      pink: "2px solid #FF00FF",
+      purple: "2px solid #942fea",
     },
   },
   variants: {

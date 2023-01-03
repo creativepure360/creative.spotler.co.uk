@@ -115,13 +115,13 @@ const Header = () => {
             </Link>
           </div>
           <Nav right width={width} styles={navStyles} isOpen={isOpen} onOpen={() => setIsOpen(true)} onClose={() => setIsOpen(false)}>
-            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href={`/products`} scroll={false} onClick={() => setIsOpen(false)}>
+            <Link className="block font-greycliff text-[#002a4d] text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href={`/products`} scroll={false} onClick={() => setIsOpen(false)}>
               Products
             </Link>
-            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href={`/tools`} scroll={false} onClick={() => setIsOpen(false)}>
+            <Link className="block font-greycliff text-[#002a4d] text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href={`/tools`} scroll={false} onClick={() => setIsOpen(false)}>
               Tools
             </Link>
-            <Link className="block font-greycliff text-black text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href="https://www.pure360.com/contact-us/" onClick={() => setIsOpen(false)}>
+            <Link className="block font-greycliff text-[#002a4d] text-5xl mb-6 hover:text-[#002a4d] transition duration-250" href="https://www.pure360.com/contact-us/" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </Nav>

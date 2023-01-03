@@ -16,8 +16,8 @@ const Index = ({ categories }) => {
               <br />
               <span className="creative block py-1">Creative Space.</span>
             </h1>
-            <p className="mb-8">Designed as a playground for innovation. Here you'll find all the products, tools and updates from the Creative Team at Pure360.</p>
-            <Link className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3" href="/products" scroll={false}>
+            <p className="mb-8 font-opensans">Designed as a playground for innovation. Here you'll find all the products, tools and updates from the Creative Team at Pure360.</p>
+            <Link className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3" href="/products" scroll={false}>
               View Our Products
             </Link>
           </motion.div>
@@ -31,7 +31,7 @@ const Index = ({ categories }) => {
         </div>
       </section>
       <section>
-        <motion.article variants={childrenVariants} className="highlight bg-[#23afe6] mb-12 px-4 sm:px-8 py-12 sm:py-16">
+        <motion.article variants={childrenVariants} className="highlight bg-[#942fea] mb-12 px-4 sm:px-8 py-12 sm:py-16">
           <h2 className="font-greycliff text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">We can help you with that.</h2>
           <h3 className="font-opensans text-white text-lg text-center leading-6 sm:leading-7 mx-auto max-w-lg mb-12">Know which part of your business needs some marketing love? We can work with you to target specific areas with our beautiful design and technical skills.</h3>
         </motion.article>
@@ -40,8 +40,8 @@ const Index = ({ categories }) => {
         {categories.map(({ id, title, exerpt, slug }) => (
           <motion.article variants={childrenVariants} key={id} className="border-gray-50 border-4 rounded-lg p-8 m-2">
             <h3 className="font-greycliff text-2xl sm:text-3xl mb-3">{title}</h3>
-            <BlockContent blocks={exerpt} />
-            <Link className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6" href={`/categories/${slug}`} scroll={false}>
+            <p className="font-opensans"><BlockContent blocks={exerpt} /></p>
+            <Link className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6" href={`/categories/${slug}`} scroll={false}>
               Learn more
             </Link>
           </motion.article>

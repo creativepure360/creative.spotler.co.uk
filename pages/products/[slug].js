@@ -16,15 +16,17 @@ const Product = ({ product }) => {
           <span className="text-[#002a4d] uppercase pb-2 text-lg mb-2">{type}</span>
           <h1 className="font-greycliff text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">{name}</h1>
           <div className="mb-8">
-            <BlockContent blocks={description} />
+            <p className="font-opensans">
+              <BlockContent blocks={description} />
+            </p>
           </div>
           <div>
-            <a href="https://www.pure360.com/contact-us/" target="_blank" className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mb-6">
+            <a href="https://www.pure360.com/contact-us/" target="_blank" className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mb-6">
               Contact Us
             </a>
           </div>
           <div>
-            <Link className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3" href={`/products`} scroll={false}>
+            <Link className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3" href={`/products`} scroll={false}>
               Back To Products
             </Link>
           </div>

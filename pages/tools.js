@@ -27,7 +27,7 @@ const Tools = ({tools}) => {
       <section>
         <motion.article
           variants={childrenVariants}
-          className="highlight bg-[#23afe6] mb-12 px-4 sm:px-8 py-12 sm:py-16"
+          className="highlight bg-[#942fea] mb-12 px-4 sm:px-8 py-12 sm:py-16"
         >
           <h2 className="font-greycliff text-white text-2xl sm:text-4xl leading-8 sm:leading-10 text-center mb-3 mx-auto max-w-2xl">
             Lorem ipsum dolor sit amet.
@@ -51,7 +51,7 @@ const Tools = ({tools}) => {
               <a
                 href={url}
                 target="_blank"
-                className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6"
+                className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6"
               >
                 Open tool
               </a>

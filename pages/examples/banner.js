@@ -6,7 +6,7 @@ import ExitPreview from '../../components/ExitPreview';
 
 const instances = {
   a: {
-    bg: "from-[#002a4d] to-[#23afe6]",
+    bg: "from-[#002a4d] to-[#942fea]",
     heading: "Lorem ipsum dolor!",
     body:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
@@ -14,7 +14,7 @@ const instances = {
     ctaBg: "bg-[#002a4d]",
   },
   b: {
-    bg: "from-[#002a4d] to-[#23afe6]",
+    bg: "from-[#002a4d] to-[#942fea]",
     heading: "Integer tincidunt!",
     body:
       " Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.",
@@ -22,7 +22,7 @@ const instances = {
     ctaBg: "bg-[#002a4d]",
   },
   c: {
-    bg: "from-[#002a4d] to-[#23afe6]",
+    bg: "from-[#002a4d] to-[#942fea]",
     heading: "Quis gravida magna!",
     body:
       "Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis.",
@@ -60,7 +60,7 @@ const banner = () => {
         <motion.article variants={childrenVariants} className="text-center">
           <div className="block sm:inline mb-4 sm:mx-2">
             <a
-              className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
+              className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
               onClick={() => setInstance("a")}
             >
               Customer A
@@ -68,7 +68,7 @@ const banner = () => {
           </div>
           <div className="block sm:inline mb-4 sm:mx-2">
             <a
-              className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
+              className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
               onClick={() => setInstance("b")}
             >
               Customer B
@@ -76,7 +76,7 @@ const banner = () => {
           </div>
           <div className="block sm:inline mb-4 sm:mx-2">
             <a
-              className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
+              className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3"
               onClick={() => setInstance("c")}
             >
               Customer C

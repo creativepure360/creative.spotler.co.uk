@@ -40,7 +40,7 @@ const countdownTimer = () => {
       <section className="max-w-screen-lg mx-auto mb-32 px-4 sm:px-8">
         <motion.article
           variants={childrenVariants}
-          className="w-full max-w-9/10 sm:max-w-2xl mx-auto bg-gradient-to-r from-[#002a4d] to-[#23afe6] rounded-lg p-6 sm:p-16"
+          className="w-full max-w-9/10 sm:max-w-2xl mx-auto bg-gradient-to-r from-[#002a4d] to-[#942fea] rounded-lg p-6 sm:p-16"
         >
           <div className="text-center">
             <h2 className="font-greycliff text-white text-3xl sm:text-5xl leading-10 sm:leading-14 mb-4 sm:mb-10">

@@ -89,7 +89,7 @@ const dataCapture = () => {
                   </h2>
                   <p className="text-base mb-3">{description}</p>
                   <p className="font-opensans mb-5">£{price}</p>
-                  <a className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3">
+                  <a className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block cursor-pointer px-8 py-3">
                     Add To Cart
                   </a>
                 </div>
