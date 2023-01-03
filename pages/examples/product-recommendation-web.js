@@ -84,7 +84,7 @@ const dataCapture = () => {
                   key={id}
                 >
                   <img src={image} className="cursor-pointer mb-3" />
-                  <h2 className="font-greycliff text-pavilion-purple text-2xl leading-6 cursor-pointer">
+                  <h2 className="font-greycliff text-[#002a4d] text-2xl leading-6 cursor-pointer">
                     {name}
                   </h2>
                   <p className="text-base mb-3">{description}</p>

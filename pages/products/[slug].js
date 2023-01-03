@@ -39,7 +39,7 @@ const Product = ({ product }) => {
         <motion.article className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10" variants={childrenVariants}>
           <img className="w-full mx-auto" src={`${urlFor(image)}?blur=50`} />
           <div className="absolute z-50" style={{ top: "calc(50% - 22px)", left: "calc(50% - 62px)" }}>
-            <Link className="text-base text-pavilion-purple duration-300 hover:text-white bg-transparent hover:bg-[#002a4d] border-pavilion-purple border-2 inline-block px-8 py-3" href={`/examples/${slug}`} scroll={false}>
+            <Link className="text-base text-[#002a4d] duration-300 hover:text-white bg-transparent hover:bg-[#002a4d] border-[#002a4d] border-2 inline-block px-8 py-3" href={`/examples/${slug}`} scroll={false}>
               Preview
             </Link>
           </div>
