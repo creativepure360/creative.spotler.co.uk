@@ -20,7 +20,7 @@ const Category = ({ category }) => {
         ></motion.article>
         <motion.article variants={childrenVariants} className="col-span-1 sm:col-span-2">
           <h1 className="font-greycliff text-3xl sm:text-5xl leading-10 sm:leading-14 mt-2 mb-4 sm:mb-8">{title}</h1>
-          <p className="font-opensans"><BlockContent blocks={description} /></p>
+          <div className="font-opensans"><BlockContent blocks={description} /></div>
         </motion.article>
       </section>
       <section>
@@ -34,7 +34,7 @@ const Category = ({ category }) => {
           <motion.article variants={childrenVariants} key={id} className="border-gray-50 border-4 rounded-lg p-8 m-2">
             <span className="text-[#002a4d] uppercase pb-2 text-xs mb-2">{type}</span>
             <h3 className="font-greycliff text-2xl sm:text-3xl mb-3">{name}</h3>
-            <p className="font-opensans"><BlockContent blocks={exerpt} /></p>
+            <div className="font-opensans"><BlockContent blocks={exerpt} /></div>
             <Link className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6" href={`/products/${slug}`} scroll={false}>
               Learn more
             </Link>

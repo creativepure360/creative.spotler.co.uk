@@ -40,7 +40,7 @@ const Index = ({ categories }) => {
         {categories.map(({ id, title, exerpt, slug }) => (
           <motion.article variants={childrenVariants} key={id} className="border-gray-50 border-4 rounded-lg p-8 m-2">
             <h3 className="font-greycliff text-2xl sm:text-3xl mb-3">{title}</h3>
-            <p className="font-opensans"><BlockContent blocks={exerpt} /></p>
+            <div className="font-opensans"><BlockContent blocks={exerpt} /></div>
             <Link className="font-opensans font-bold text-base text-white duration-300 bg-[#002a4d] hover:bg-white hover:text-[#002a4d] rounded-3xl border border-[#002a4d] inline-block px-8 py-3 mt-6" href={`/categories/${slug}`} scroll={false}>
               Learn more
             </Link>
