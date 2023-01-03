@@ -7,7 +7,7 @@ const ExitPreview = () => {
     <section>
       <article className="fixed bottom-0 w-full bg-[#002a4d] py-8 flex justify-center">
         <a
-          className="text-base text-white duration-300 bg-[#002a4d] hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
+          className="text-base text-white hover:text-[#002a4d] duration-300 bg-[#002a4d] hover:bg-white border-white border-2 inline-block cursor-pointer px-8 py-3"
           onClick={() =>
             router.push(router.pathname.replace("examples", "products"))
           }
