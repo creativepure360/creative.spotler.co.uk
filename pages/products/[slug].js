@@ -32,23 +32,10 @@ const Product = ({ product }) => {
           </div>
         </motion.article>
       </section>
-      <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
-        <motion.article variants={childrenVariants} className="mx-2 mb-4">
-          <h2 className="font-greycliff text-3xl sm:text-4xl mb-3 mx-auto leading-10">Preview</h2>
-        </motion.article>
-        <motion.article className="product-example border-gray-50 border-4 rounded-lg p-8 mb-10" variants={childrenVariants}>
-          <img className="w-full mx-auto" src={`${urlFor(image)}?blur=50`} />
-          <div className="absolute z-50" style={{ top: "calc(50% - 22px)", left: "calc(50% - 62px)" }}>
-            <Link className="text-base text-[#002a4d] duration-300 hover:text-white bg-transparent hover:bg-[#002a4d] border-[#002a4d] border-2 inline-block px-8 py-3" href={`/examples/${slug}`} scroll={false}>
-              Preview
-            </Link>
-          </div>
-        </motion.article>
-      </section>
       {examples && (
         <section className="max-w-screen-lg mx-auto px-4 sm:px-8">
           <motion.article variants={childrenVariants} className="mx-2 mb-4">
-            <h2 className="font-greycliff text-3xl sm:text-4xl mb-3 mx-auto leading-10">Examples</h2>
+            <h2 className="font-greycliff text-3xl sm:text-4xl mb-3 mx-auto leading-10">Our Work</h2>
           </motion.article>
           <SimpleReactLightbox>
             <SRLWrapper>
