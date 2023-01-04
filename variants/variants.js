@@ -6,14 +6,14 @@ export const parentVariants = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.25,
+      staggerChildren: 0.15,
     },
   },
 };
 
 export const childrenVariants = {
   hidden: {
-    y: -10,
+    y: -15,
     opacity: 0,
   },
   visible: {
