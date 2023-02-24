@@ -13,7 +13,7 @@ export const parentVariants = {
 
 export const childrenVariants = {
   hidden: {
-    y: -15,
+    y: -10,
     opacity: 0,
   },
   visible: {

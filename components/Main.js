@@ -9,10 +9,9 @@ const Main = ({ children, router }) => {
   }, [router.route]);
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <motion.main
-          className="py-8"
-          style={{ minHeight: "calc(100vh - 13rem)" }}
+          className="pt-[100px]"
           key={router.route}
           exit={{ opacity: 0, transition: { duration: 0.25 } }}
         >
