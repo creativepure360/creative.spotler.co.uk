@@ -5,7 +5,6 @@ import BlockContent from "@sanity/block-content-to-react";
 import { urlFor } from "../../utils/image-url";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
 const Product = ({ product }) => {
   const [{ name, description, image, category, examples }] = product;
@@ -28,19 +27,6 @@ const Product = ({ product }) => {
           <section className="max-w-[1200px] mx-auto py-[50px] px-[30px]">
             <motion.article variants={childrenVariants}>
               <h2 className="font-greycliff text-[#002a4d] text-[30px] sm:text-[36px] leading-[1.1] font-bold mb-[30px]">Examples</h2>
-            </motion.article>
-            <motion.article variants={childrenVariants}>
-              <SimpleReactLightbox>
-                <SRLWrapper>
-                  {examples.map((example, key) => (
-                    <div key={key} className="grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
-                      <motion.article variants={childrenVariants} className="col-span-4">
-                        <img className="w-full cursor-pointer" src={urlFor(example)} />
-                      </motion.article>
-                    </div>
-                  ))}
-                </SRLWrapper>
-              </SimpleReactLightbox>
             </motion.article>
           </section>
         </div>
