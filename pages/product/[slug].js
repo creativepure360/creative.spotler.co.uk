@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Contact from "../../components/Contact";
 import groq from "groq";
 import client from "../../client-config";
@@ -5,8 +6,20 @@ import BlockContent from "@sanity/block-content-to-react";
 import { urlFor } from "../../utils/image-url";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
+import FsLightbox from "fslightbox-react";
 
 const Product = ({ product }) => {
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
+
+  const openLightboxOnSlide = (number) => {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number,
+    });
+  };
   const [{ name, description, image, category, examples }] = product;
   return (
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
@@ -24,10 +37,18 @@ const Product = ({ product }) => {
       </div>
       {examples && examples.length >= 1 && (
         <div className="bg-white">
-          <section className="max-w-[1200px] mx-auto py-[50px] px-[30px]">
-            <motion.article variants={childrenVariants}>
+          <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
+            <motion.article className="col-span-12" variants={childrenVariants}>
               <h2 className="font-greycliff text-[#002a4d] text-[30px] sm:text-[36px] leading-[1.1] font-bold mb-[30px]">Examples</h2>
             </motion.article>
+            {examples.map((example, index) => {
+              return (
+                <motion.article key={index} className="col-span-11 sm:col-span-3" variants={childrenVariants}>
+                  <img className="object-cover object-top" src={urlFor(example).url()} onClick={() => openLightboxOnSlide(index + 1)} />
+                </motion.article>
+              );
+            })}
+            <FsLightbox type="image" toggler={lightboxController.toggler} sources={examples.map((example) => urlFor(example).url())} slide={lightboxController.slide} />
           </section>
         </div>
       )}
