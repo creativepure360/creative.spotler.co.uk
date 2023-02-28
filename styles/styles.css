@@ -44,3 +44,7 @@
     font-display: swap;
   }
 }
+
+p {
+  @apply mb-[16px];
+}

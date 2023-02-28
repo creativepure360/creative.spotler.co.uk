@@ -7,19 +7,20 @@ import { urlFor } from "utils/image-url";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../variants/variants";
 
-const Index = ({ productGroups }) => {
+const Index = ({ productGroups, page }) => {
+  const [{ title, copy, image }] = page;
   return (
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
       <div className="bg-[#23afe6]">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
           <motion.article className="col-span-1 sm:col-span-8" variants={childrenVariants}>
-            <h1 className="font-greycliff text-white text-[34px] sm:text-[40px] leading-[1.1] font-bold mb-[30px]">Lorem ipsum dolor sit amet</h1>
-            <p className="font-opensans text-[18px]leading-6 text-white mb-[30px]">
-              orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-            </p>
+            <h1 className="font-greycliff text-white text-[34px] sm:text-[40px] leading-[1.1] font-bold mb-[30px]">{title}</h1>
+            <div className="font-opensans text-[18px]leading-6 text-white mb-[30px]">
+            <BlockContent blocks={copy} />
+            </div>
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
-            <img src="https://cdn.sanity.io/images/tgvb7jy1/production/e24255bf306541fbae4670d6387fde657a3d5853-512x512.png?w=2000&fit=max&auto=format" />
+            <img src={urlFor(image)} />
           </motion.article>
         </section>
       </div>
@@ -54,6 +55,14 @@ const Index = ({ productGroups }) => {
 };
 
 export const getStaticProps = async () => {
+  const page = await client.fetch(
+    groq`*[_type == 'page' && _id == 'f7a5a142-e664-421d-bdb8-05dd2fcdadaf']
+    {
+        title,
+        copy,
+        image,
+    }`
+  );
   const productGroups = await client.fetch(
     groq`*[_type == "category"] | order(name asc) {
       "id": _id,
@@ -69,7 +78,7 @@ export const getStaticProps = async () => {
     }`
   );
   return {
-    props: { productGroups },
+    props: { productGroups, page },
     revalidate: 1,
   };
 };
