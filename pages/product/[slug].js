@@ -42,9 +42,10 @@ const Product = ({ product }) => {
               <h2 className="font-greycliff text-[#002a4d] text-[30px] sm:text-[36px] leading-[1.1] font-bold mb-[30px]">Examples</h2>
             </motion.article>
             {examples.map((example, index) => {
+              const url = urlFor(example).url();
               return (
                 <motion.article key={index} className="col-span-11 sm:col-span-3" variants={childrenVariants}>
-                  <img className="object-cover object-top" src={urlFor(example).url()} onClick={() => openLightboxOnSlide(index + 1)} />
+                  <div className={`bg-top bg-no-repeat bg-cover pt-[100%]`} style={{backgroundImage: `url(${url})`}} onClick={() => openLightboxOnSlide(index + 1)} />
                 </motion.article>
               );
             })}
