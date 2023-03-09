@@ -14,7 +14,7 @@ const Post = ({ post }) => {
       <div className="bg-white">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px]">
           <motion.article variants={childrenVariants}>
-            <p className="inline-block mb-[30px]">
+            <p className="inline-block mb-[30px] text-[#002a4d]">
               <Link className="text-[#23afe6] mr-[5px]" href={`/blog`} scroll={false}>
                 Blog
               </Link>

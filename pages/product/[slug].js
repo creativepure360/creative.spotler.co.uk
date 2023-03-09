@@ -25,7 +25,7 @@ const Product = ({ product }) => {
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
       <div className="bg-white">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
-          <motion.article className="col-span-1 sm:col-span-8" variants={childrenVariants}>
+          <motion.article className="col-span-1 sm:col-span-8 text-[#002a4d]" variants={childrenVariants}>
             <span className="block font-greycliff text-[#23afe6] text-[16px] leading-[1] mb-[10px]">{category}</span>
             <h1>{name}</h1>
             <BlockContent blocks={description} />
@@ -38,8 +38,8 @@ const Product = ({ product }) => {
       {examples && examples.length >= 1 && (
         <div className="bg-white">
           <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
-            <motion.article className="col-span-12" variants={childrenVariants}>
-              <h2 className="text-[#002a4d]">Examples</h2>
+            <motion.article className="col-span-12 text-[#002a4d]" variants={childrenVariants}>
+              <h2>Examples</h2>
             </motion.article>
             {examples.map((example, index) => {
               const url = urlFor(example).url();
