@@ -13,11 +13,9 @@ const Index = ({ productGroups, page }) => {
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
       <div className="bg-[#23afe6]">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
-          <motion.article className="col-span-1 sm:col-span-8" variants={childrenVariants}>
-            <h1 className="font-greycliff text-white text-[34px] sm:text-[40px] leading-[1.1] font-bold mb-[30px]">{title}</h1>
-            <div className="font-opensans text-[18px]leading-6 text-white mb-[30px]">
+          <motion.article className="col-span-1 sm:col-span-8 text-white" variants={childrenVariants}>
+            <h1>{title}</h1>
             <BlockContent blocks={copy} />
-            </div>
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
             <img src={urlFor(image)} />
@@ -27,21 +25,17 @@ const Index = ({ productGroups, page }) => {
       <div className="bg-[#e6f6fc]">
         {productGroups.map(({ id, name, description, products }) => (
           <section key={id} className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
-            <motion.article className="col-span-1 sm:col-span-12 text-center" variants={childrenVariants}>
-              <h2 className="font-greycliff text-[#002a4d] text-[30px] sm:text-[36px] leading-[1.1] font-bold mb-[30px]">{name}</h2>
-              <div className="font-opensans text-[18px]leading-6 text-[#002a4d] mb-[20px]">
-                <BlockContent blocks={description} />
-              </div>
+            <motion.article className="col-span-1 sm:col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
+              <h2>{name}</h2>
+              <BlockContent blocks={description} />
             </motion.article>
             {products.map(({ id, name, exerpt, image, slug }) => (
               <motion.article key={id} className="col-span-1 sm:col-span-6" variants={childrenVariants}>
                 <Link href={`/product/${slug}`} scroll={false}>
-                  <div className="bg-white p-[30px] text-center hover:translate-y-[-10px] transition duration-300">
+                  <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300">
                     <img className="mx-auto max-w-[150px] mb-[15px]" src={urlFor(image)} />
-                    <h3 className="font-greycliff text-[#002a4d] text-[24px] leading-[1.1] font-bold mb-[10px]">{name}</h3>
-                    <div className="font-opensans text-[18px] leading-6 text-[#002a4d] mb-[30px]">
-                      <BlockContent blocks={exerpt} />
-                    </div>
+                    <h3>{name}</h3>
+                    <BlockContent blocks={exerpt} />
                   </div>
                 </Link>
               </motion.article>

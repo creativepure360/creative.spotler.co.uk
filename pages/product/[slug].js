@@ -26,9 +26,9 @@ const Product = ({ product }) => {
       <div className="bg-white">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
           <motion.article className="col-span-1 sm:col-span-8" variants={childrenVariants}>
-            <span className="block font-greycliff text-[#23afe6] text-[16px] leading-[1] font-normal mb-[10px]">{category}</span>
-            <h1 className="font-greycliff text-[#002a4d] text-[34px] sm:text-[40px] leading-[1.1] font-bold mb-[30px]">{name}</h1>
-            <BlockContent className="font-opensans text-[18px]leading-6 text-[#002a4d] mb-[30px]" blocks={description} />
+            <span className="block font-greycliff text-[#23afe6] text-[16px] leading-[1] mb-[10px]">{category}</span>
+            <h1>{name}</h1>
+            <BlockContent blocks={description} />
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
             <img src={urlFor(image)} />
@@ -39,13 +39,13 @@ const Product = ({ product }) => {
         <div className="bg-white">
           <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
             <motion.article className="col-span-12" variants={childrenVariants}>
-              <h2 className="font-greycliff text-[#002a4d] text-[30px] sm:text-[36px] leading-[1.1] font-bold mb-[30px]">Examples</h2>
+              <h2 className="text-[#002a4d]">Examples</h2>
             </motion.article>
             {examples.map((example, index) => {
               const url = urlFor(example).url();
               return (
                 <motion.article key={index} className="col-span-11 sm:col-span-3" variants={childrenVariants}>
-                  <div className={`bg-top bg-no-repeat bg-cover pt-[100%] cursor-pointer`} style={{backgroundImage: `url(${url})`}} onClick={() => openLightboxOnSlide(index + 1)} />
+                  <div className={`bg-top bg-no-repeat bg-cover pt-[100%] cursor-pointer`} style={{ backgroundImage: `url(${url})` }} onClick={() => openLightboxOnSlide(index + 1)} />
                 </motion.article>
               );
             })}

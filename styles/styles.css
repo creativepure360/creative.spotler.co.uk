@@ -45,6 +45,50 @@
   }
 }
 
+body {
+  @apply font-opensans font-normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-greycliff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply leading-[1.1] font-bold;
+}
+
+h1,
+h2 {
+  @apply mb-[30px];
+}
+
+h3,
+h4 {
+  @apply mb-[20px];
+}
+
+h1 {
+  @apply text-[34px] sm:text-[40px];
+}
+
+h2 {
+  @apply text-[30px] sm:text-[36px];
+}
+
+h3 {
+  @apply text-[24px];
+}
+
+h4 {
+  @apply text-[20px];
+}
+
 p {
-  @apply mb-[16px];
+  @apply text-[18px] leading-6 mb-[20px];
 }

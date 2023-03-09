@@ -13,11 +13,9 @@ const Blog = ({ blogPosts, page }) => {
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
       <div className="bg-[#23afe6]">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
-          <motion.article className="col-span-1 sm:col-span-8" variants={childrenVariants}>
-            <h1 className="font-greycliff text-white text-[34px] sm:text-[40px] leading-[1.1] font-bold mb-[30px]">{title}</h1>
-            <div className="font-opensans text-[18px]leading-6 text-white mb-[30px]">
+          <motion.article className="col-span-1 sm:col-span-8 text-white" variants={childrenVariants}>
+            <h1>{title}</h1>
             <BlockContent blocks={copy} />
-            </div>
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
             <img src={urlFor(image)} />
@@ -31,13 +29,13 @@ const Blog = ({ blogPosts, page }) => {
               <div className="bg-white text-center hover:translate-y-[-10px] transition duration-300">
                 <Link href={`/post/${slug}`} scroll={false}>
                   <div className={`w-full bg-center bg-no-repeat bg-cover p-[25%]`} style={{ backgroundImage: `url('${urlFor(image).url()}` }}></div>
-                  <div className="text-left p-[30px]">
-                    <h3 className="font-greycliff text-[#002a4d] text-[24px] leading-[1.1] font-bold mb-[20px] ">{title}</h3>
-                    <span className="block font-greycliff text-[#002a4d] text-[14px] leading-[1] font-normal mb-[20px]">{date}</span>
-                    <div className="font-opensans text-[18px] leading-6 text-[#002a4d] mb-[30px]">
+                  <div className="text-[#002a4d] text-left p-[30px]">
+                    <h3>{title}</h3>
+                    <span className="block text-[14px] leading-[1] mb-[20px]">{date}</span>
+                    <div className="text-black mb-[30px]">
                       <BlockContent blocks={exerpt} />
                     </div>
-                    <span className="font-opensans text-[18px] leading-[18px] text-[#23afe6] underline">Read more</span>
+                    <span className="text-[18px] leading-[18px] text-[#23afe6] underline">Read more</span>
                   </div>
                 </Link>
               </div>
