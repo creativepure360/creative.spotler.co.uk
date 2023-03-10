@@ -40,9 +40,9 @@ const Tools = ({ page }) => {
       <div className="bg-[#e6f6fc]">
         <section className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
           {tools.map(({ image, name, description, link }) => (
-            <motion.article className="col-span-1 sm:col-span-6" variants={childrenVariants}>
+            <motion.article className="col-span-1 sm:col-span-6 h-full" variants={childrenVariants}>
               <Link href={link} target="_blank" scroll={false}>
-                <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300">
+                <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300 h-full">
                   <img className="mx-auto max-w-[150px] mb-[15px]" src={image} />
                   <h3>{name}</h3>
                   <p>{description}</p>

@@ -24,23 +24,27 @@ const Index = ({ productGroups, page }) => {
       </div>
       <div className="bg-[#e6f6fc]">
         {productGroups.map(({ id, name, description, products }) => (
-          <section key={id} className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
-            <motion.article className="col-span-1 sm:col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
-              <h2>{name}</h2>
-              <BlockContent blocks={description} />
-            </motion.article>
-            {products.map(({ id, name, exerpt, image, slug }) => (
-              <motion.article key={id} className="col-span-1 sm:col-span-6" variants={childrenVariants}>
-                <Link href={`/product/${slug}`} scroll={false}>
-                  <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300">
-                    <img className="mx-auto max-w-[150px] mb-[15px]" src={urlFor(image)} />
-                    <h3>{name}</h3>
-                    <BlockContent blocks={exerpt} />
-                  </div>
-                </Link>
+          <>
+            <section key={id} className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
+              <motion.article className="col-span-1 sm:col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
+                <h2>{name}</h2>
+                <BlockContent blocks={description} />
               </motion.article>
-            ))}
-          </section>
+            </section>
+            <section key={id} className="max-w-[1200px] mx-auto pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
+              {products.map(({ id, name, exerpt, image, slug }) => (
+                <motion.article key={id} className="col-span-1 sm:col-span-6 h-full" variants={childrenVariants}>
+                  <Link href={`/product/${slug}`} scroll={false}>
+                    <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300 h-full">
+                      <img className="mx-auto max-w-[150px] mb-[15px]" src={urlFor(image)} />
+                      <h3>{name}</h3>
+                      <BlockContent blocks={exerpt} />
+                    </div>
+                  </Link>
+                </motion.article>
+              ))}
+            </section>
+          </>
         ))}
       </div>
       <Contact />
