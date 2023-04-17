@@ -9,13 +9,13 @@ import { childrenVariants, parentVariants } from "../variants/variants";
 
 const tools = [
   {
-    image: "https://cdn.sanity.io/images/tgvb7jy1/production/83b774b387e77e76b8cc16674843d207d4fd89d7-300x300.webp",
+    image: "https://cdn.sanity.io/images/tgvb7jy1/production/10d4d7a33813a3d6a5039709abc0ffd3400c4904-300x300.png",
     name: "Template Builder",
-    description: "Rapidly build a stunning and effective email campaign from your custom template in minutes",
+    description: "Rapidly build a stunning and effective email campaign from your custom template in seconds",
     link: "https://www.uploadlibrary.com/creativepure360/template-builder/index.html",
   },
   {
-    image: "https://cdn.sanity.io/images/tgvb7jy1/production/83b774b387e77e76b8cc16674843d207d4fd89d7-300x300.webp",
+    image: "https://cdn.sanity.io/images/tgvb7jy1/production/be2290b59c53150d502cb74df64c1d3dcc089c2b-300x300.png",
     name: "Form Builder",
     description: "Create simple contact forms or complex surveys with our easy-to-use form builder",
     link: "https://www.uploadlibrary.com/creativepure360/formbuilder/index.html",
