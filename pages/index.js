@@ -1,4 +1,3 @@
-import Contact from "../components/Contact";
 import Link from "next/link";
 import groq from "groq";
 import client from "../client-config";
@@ -47,7 +46,6 @@ const Index = ({ productGroups, page }) => {
           </>
         ))}
       </div>
-      <Contact />
     </motion.div>
   );
 };

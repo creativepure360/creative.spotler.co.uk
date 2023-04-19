@@ -1,4 +1,3 @@
-import Contact from "../../components/Contact";
 import Link from "next/link";
 import groq from "groq";
 import client from "../../client-config";
@@ -31,7 +30,6 @@ const Post = ({ post }) => {
           </motion.article>
         </section>
       </div>
-      <Contact />
     </motion.div>
   );
 };

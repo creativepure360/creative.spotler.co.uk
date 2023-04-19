@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Contact from "../../components/Contact";
 import groq from "groq";
 import client from "../../client-config";
 import BlockContent from "@sanity/block-content-to-react";
@@ -53,7 +52,6 @@ const Product = ({ product }) => {
           </section>
         </div>
       )}
-      <Contact />
     </motion.div>
   );
 };
