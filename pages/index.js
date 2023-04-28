@@ -26,7 +26,7 @@ const Index = ({ productGroups, page }) => {
           <>
             <section key={id} className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
               <motion.article className="col-span-1 sm:col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
-                <h2>{name}</h2>
+                <h2 className="mb-0">{name}</h2>
               </motion.article>
             </section>
             <section key={id} className="max-w-[1200px] mx-auto pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
