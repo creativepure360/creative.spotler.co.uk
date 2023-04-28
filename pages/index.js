@@ -22,12 +22,11 @@ const Index = ({ productGroups, page }) => {
         </section>
       </div>
       <div className="bg-[#e6f6fc]">
-        {productGroups.map(({ id, name, description, products }) => (
+        {productGroups.map(({ id, name, products }) => (
           <>
             <section key={id} className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
               <motion.article className="col-span-1 sm:col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
                 <h2>{name}</h2>
-                <BlockContent blocks={description} />
               </motion.article>
             </section>
             <section key={id} className="max-w-[1200px] mx-auto pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
@@ -63,7 +62,6 @@ export const getStaticProps = async () => {
     groq`*[_type == "category"] | order(name asc) {
       "id": _id,
       name,
-      description,
       "products": *[_type == "product" && references(^._id)] | order(name asc) {
             "id": _id,
             image,
