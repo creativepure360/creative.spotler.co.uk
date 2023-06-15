@@ -6,7 +6,7 @@ import { urlFor } from "utils/image-url";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../variants/variants";
 
-const Index = ({ productGroups, page }) => {
+const Index = ({ products, page }) => {
   const [{ title, copy, image }] = page;
   return (
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
@@ -22,28 +22,19 @@ const Index = ({ productGroups, page }) => {
         </section>
       </div>
       <div className="bg-[#e6f6fc]">
-        {productGroups.map(({ id, name, products }) => (
-          <>
-            <section key={id} className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
-              <motion.article className="col-span-1 sm:col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
-                <h2 className="mb-0">{name}</h2>
-              </motion.article>
-            </section>
-            <section key={id} className="max-w-[1200px] mx-auto pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
-              {products.map(({ id, name, exerpt, image, slug }) => (
-                <motion.article key={id} className="col-span-1 sm:col-span-6 h-full" variants={childrenVariants}>
-                  <Link href={`/product/${slug}`} scroll={false}>
-                    <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300 h-full">
-                      <img className="mx-auto max-w-[150px] mb-[15px]" src={urlFor(image)} />
-                      <h3>{name}</h3>
-                      <BlockContent blocks={exerpt} />
-                    </div>
-                  </Link>
-                </motion.article>
-              ))}
-            </section>
-          </>
-        ))}
+        <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
+          {products.map(({ id, name, exerpt, image, slug }) => (
+            <motion.article key={id} className="col-span-1 sm:col-span-6 h-full" variants={childrenVariants}>
+              <Link href={`/product/${slug}`} scroll={false}>
+                <div className="bg-white p-[30px] text-[#002a4d] text-center hover:translate-y-[-10px] transition duration-300 h-full">
+                  <img className="mx-auto max-w-[150px] mb-[15px]" src={urlFor(image)} />
+                  <h3>{name}</h3>
+                  <BlockContent blocks={exerpt} />
+                </div>
+              </Link>
+            </motion.article>
+          ))}
+        </section>
       </div>
     </motion.div>
   );
@@ -58,21 +49,17 @@ export const getStaticProps = async () => {
         image,
     }`
   );
-  const productGroups = await client.fetch(
-    groq`*[_type == "category"] | order(name asc) {
+  const products = await client.fetch(
+    groq`*[_type == "product"] | order(name asc) {
       "id": _id,
-      name,
-      "products": *[_type == "product" && references(^._id)] | order(name asc) {
-            "id": _id,
-            image,
-            name, 
-            exerpt,
-            "slug": slug.current,
-        }
+      image,
+      name, 
+      exerpt,
+      "slug": slug.current,
     }`
   );
   return {
-    props: { productGroups, page },
+    props: { products, page },
     revalidate: 1,
   };
 };

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 
 const Post = ({ post }) => {
-  const [{ image, date, title, copy }] = post;
+  const [{ image, date, title, copy, platform }] = post;
   return (
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
       <div className="bg-white">
@@ -24,6 +24,7 @@ const Post = ({ post }) => {
             <div className={`w-full bg-center bg-no-repeat bg-cover p-[25%] mb-[40px]`} style={{ backgroundImage: `url('${urlFor(image).url()}` }}></div>
           </motion.article>
           <motion.article variants={childrenVariants}>
+            <span>{platform[0].name}</span>
             <h1 className="text-[#002a4d]">{title}</h1>
             <span className="block font-greycliff text-[14px] leading-[1] text-[#002a4d] mb-[30px]">{date}</span>
             <BlockContent blocks={copy} />
@@ -47,7 +48,14 @@ export const getStaticProps = async ({ params }) => {
         date,
         image, 
         title,
-        copy,
+        copy[]{
+          ..., 
+          asset->{
+            ...,
+            "_key": _id
+          },
+        },
+        platform[] -> {name}
     }`
   );
   return {
