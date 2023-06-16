@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <>
       <header className={`w-full fixed top-0 ${backgroundColor ? "bg-[#23afe6] hover:bg-[#ffffff]" : "bg-[#ffffff]"} z-[1000] transition-all duration-300`}>
-        <nav className="h-[100px] flex items-center justify-between pr-[90px] pl-[30px]">
+        <div className="h-[100px] flex items-center justify-between pr-[90px] pl-[30px]">
           <Link href={`/`} scroll={false}>
             <svg className="w-[128px] sm:w-[156px]" fill="#002A4D" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 128 37">
               <path
@@ -111,7 +111,7 @@ const Header = () => {
           <Link className="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="https://spotler.com/get-in-touch" scroll={false}>
             Get in touch
           </Link>
-        </nav>
+        </div>
         <Nav
           right
           width={width}
@@ -119,37 +119,43 @@ const Header = () => {
             bmBurgerButton: {
               position: "fixed",
               width: "30px",
-              height: "30px",
+              height: "20px",
               right: "30px",
-              top: "35px",
+              top: "40px",
             },
             bmBurgerBars: {
               background: "#002A4D",
             },
             bmBurgerBarsHover: {
-              background: "#000",
+              background: "#002A4D",
             },
             bmCrossButton: {
-              height: "30px",
               width: "30px",
-              top: "30px",
+              height: "30px",
               right: "30px",
+              top: "30px",
             },
             bmCross: {
               background: "#002a4d",
-              width: "7px",
-              height: "40px",
-              left: "-5px",
-              top: "-10px",
+              width: "5px",
+              height: "30px",
+              left: "-4px",
+              top: "0",
             },
             bmMenuWrap: {
               position: "fixed",
-              height: "100%",
               top: 0,
             },
             bmMenu: {
               background: "#FFF",
               padding: "30px",
+            },
+            bmItemList: {
+              display: "flex",
+              flexDirection: "column",
+            },
+            bmItem: {
+              display: 'inline-block'
             },
             bmOverlay: {
               background: "rgba(0, 0, 0, 0.5)",
@@ -161,13 +167,13 @@ const Header = () => {
           onOpen={() => setIsOpen(true)}
           onClose={() => setIsOpen(false)}
         >
-          <Link className="block font-greycliff text-[#002a4d] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#23afe6] transition duration-300" href={`/`} onClick={() => setIsOpen(false)}>
+          <Link className="font-greycliff text-[#23afe6] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#002a4d] transition duration-300" href={`/`} onClick={() => setIsOpen(false)}>
             Products
           </Link>
-          <Link className="block font-greycliff text-[#002a4d] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#23afe6] transition duration-300" href={`/blog`} onClick={() => setIsOpen(false)}>
+          <Link className="font-greycliff text-[#23afe6] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#002a4d] transition duration-300" href={`/blog`} onClick={() => setIsOpen(false)}>
             Blog
           </Link>
-          <Link className="block font-greycliff text-[#002a4d] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#23afe6] transition duration-300" href={`/tools`} onClick={() => setIsOpen(false)}>
+          <Link className="font-greycliff text-[#23afe6] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#002a4d] transition duration-300" href={`/tools`} onClick={() => setIsOpen(false)}>
             Tools
           </Link>
         </Nav>

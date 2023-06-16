@@ -6,19 +6,19 @@ export const parentVariants = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
 
 export const childrenVariants = {
   hidden: {
-    y: -10,
+    y: -15,
     opacity: 0,
   },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 1 },
+    transition: { duration: 0.6 },
   },
 };

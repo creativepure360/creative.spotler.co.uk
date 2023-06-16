@@ -90,5 +90,26 @@ h4 {
 }
 
 p {
-  @apply text-[18px] leading-6 mb-[20px];
+  @apply text-[18px] leading-[1.5] mb-[20px];
+}
+
+/* Blog-specific */
+
+.post figure {
+  margin: 40px 0;
+}
+
+.post code {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 5px solid #23afe6;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 15px 20px;
+  display: block;
+  word-wrap: break-word;
 }

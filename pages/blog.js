@@ -29,7 +29,7 @@ const Blog = ({ blogPosts, page }) => {
                 <Link href={`/post/${slug}`} scroll={false}>
                   <div className={`w-full bg-center bg-no-repeat bg-cover p-[25%]`} style={{ backgroundImage: `url('${urlFor(image).url()}` }}></div>
                   <div className="text-[#002a4d] text-left p-[30px]">
-                    <span>{platform[0].name}</span>
+                    <span className="bg-[#23afe6] text-[14px] text-white py-[5px] px-[15px] rounded-[25px] inline-block mb-[10px]">{platform[0].name}</span>
                     <h3>{title}</h3>
                     <span className="block text-[14px] leading-[1] mb-[20px]">{date}</span>
                     <div className="text-black mb-[30px]">
