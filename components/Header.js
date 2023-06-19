@@ -39,10 +39,10 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header className={`w-full fixed top-0 ${backgroundColor ? "bg-[#23afe6] hover:bg-[#ffffff]" : "bg-[#ffffff]"} z-[1000] transition-all duration-300`}>
+      <header className={`w-full fixed top-0 ${backgroundColor ? "bg-[#23afe6] hover:bg-[#ffffff]" : "bg-[#ffffff]"} z-[1] transition-all duration-300`}>
         <div className="h-[100px] flex items-center justify-between pr-[90px] pl-[30px]">
           <Link href={`/`} scroll={false}>
-            <svg className="w-[128px] lg:w-[156px] duration-300 ease-in-out" fill="#002A4D" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 128 37">
+            <svg className="w-[128px] sm:w-[156px] duration-300 ease-in-out" fill="#002A4D" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 128 37">
               <path
                 d="M53.7340164,7.3245616c-6.1864204,0-11.2014885,5.0098262-11.2014885,11.1898079
                 s5.0150719,11.1898785,11.2014885,11.1898785s11.201561-5.0098953,11.201561-11.189518S59.9205093,7.3245616,53.7340164,7.3245616z
@@ -108,7 +108,7 @@ const Header = () => {
               />
             </svg>
           </Link>
-          <Link className="font-opensans text-[14px] lg:text-[18px] leading-[22.4px] lg:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] lg:px-[25px] py-[6px] lg:py-[9px] duration-300 ease-in-out" href="https://spotler.com/get-in-touch" scroll={false}>
+          <Link className="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="https://spotler.com/get-in-touch" scroll={false}>
             Get in touch
           </Link>
         </div>

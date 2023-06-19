@@ -13,7 +13,7 @@ const Blog = ({ blogPosts, page }) => {
       <div className="bg-[#23afe6]">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
           <motion.article className="col-span-1 sm:col-span-8 text-white" variants={childrenVariants}>
-            <h1 className="text-[48px] leading-[54px]">{title}</h1>
+            <h1>{title}</h1>
             <BlockContent blocks={copy} />
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
