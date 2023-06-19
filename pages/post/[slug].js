@@ -13,7 +13,7 @@ const Post = ({ post }) => {
     <>
       <motion.div className="fixed top-[100px] left-0 right-0 h-[10px] bg-[#23afe6] origin-[0%]" style={{ scaleX: scrollYProgress }} />
       <motion.div initial="hidden" animate="visible" variants={parentVariants}>
-        <div className="bg-white">
+        <div className="bg-[#e6f6fc]">
           <section className="max-w-[1200px] mx-auto py-[50px] px-[30px]">
             <motion.article variants={childrenVariants}>
               <p className="inline-block mb-[30px] text-[#002a4d]">

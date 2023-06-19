@@ -13,7 +13,7 @@ const Index = ({ products, page }) => {
       <div className="bg-[#23afe6]">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
           <motion.article className="col-span-1 sm:col-span-8 text-white" variants={childrenVariants}>
-            <h1>{title}</h1>
+            <h1 className="text-[48px] leading-[54px]">{title}</h1>
             <BlockContent blocks={copy} />
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
@@ -22,7 +22,12 @@ const Index = ({ products, page }) => {
         </section>
       </div>
       <div className="bg-[#e6f6fc]">
-        <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
+        <section className="max-w-[1200px] mx-auto pt-[50px] px-[30px]">
+          <motion.article className="col-span-12 text-[#002a4d] text-center" variants={childrenVariants}>
+            <h2>Our services</h2>
+          </motion.article>
+        </section>
+        <section className="max-w-[1200px] mx-auto pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
           {products.map(({ id, name, exerpt, image, slug }) => (
             <motion.article key={id} className="col-span-1 sm:col-span-6 h-full" variants={childrenVariants}>
               <Link href={`/product/${slug}`} scroll={false}>

@@ -35,10 +35,10 @@ const Product = ({ product }) => {
         </section>
       </div>
       {examples && examples.length >= 1 && (
-        <div className="bg-white">
+        <div className="bg-[#e6f6fc]">
           <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
             <motion.article className="col-span-12 text-[#002a4d]" variants={childrenVariants}>
-              <h2>Our work</h2>
+              <h2 className="mb-0">Our recent projects</h2>
             </motion.article>
             {examples.map((example, index) => {
               const url = urlFor(example).url();
