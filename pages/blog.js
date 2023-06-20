@@ -32,9 +32,6 @@ const Blog = ({ blogPosts, page }) => {
                     <span className="bg-[#23afe6] text-[14px] text-white py-[5px] px-[15px] rounded-[25px] inline-block mb-[10px]">{platform[0].name}</span>
                     <h3>{title}</h3>
                     <span className="block text-[14px] leading-[1] mb-[20px]">{date}</span>
-                    <div className="text-black mb-[30px]">
-                      <BlockContent blocks={exerpt} />
-                    </div>
                     <span className="text-[18px] leading-[18px] text-[#23afe6] underline">Read more</span>
                   </div>
                 </Link>

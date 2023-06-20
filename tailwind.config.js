@@ -1,13 +1,8 @@
 module.exports = {
-  purge: {
-    content: ["./components/**/*.js", "./components/**/**/*.js", "./pages/**/*.js"],
-  },
-  darkMode: false,
+  content: ["./components/**/*.js", "./components/**/**/*.js", "./pages/**/*.js"],
+  darkMode: "media",
   theme: {
     extend: {
-      boxShadow: {
-        full: "0 0 15px 0 rgba(0,0,0,0.1)",
-      },
       fontFamily: {
         greycliff: ["Greycliff CF", "sans-serif"],
         opensans: ["Open Sans", "sans-serif"],
@@ -41,14 +36,6 @@ module.exports = {
         "100p": "100%",
         "50p": "50%",
       },
-    },
-    outline: {
-      purple: "2px solid #942fea",
-    },
-  },
-  variants: {
-    extend: {
-      outline: ["hover"],
     },
   },
   plugins: [],
