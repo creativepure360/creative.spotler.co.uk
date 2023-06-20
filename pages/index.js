@@ -17,7 +17,7 @@ const Index = ({ products, page }) => {
             <BlockContent blocks={copy} />
           </motion.article>
           <motion.article className="col-span-1 sm:col-span-4 hidden sm:block" variants={childrenVariants}>
-            <img src={urlFor(image)} />
+            <img className="select-none" src={urlFor(image)} />
           </motion.article>
         </section>
       </div>
