@@ -31,7 +31,7 @@ const Footer = () => {
             <ul className="w-full max-w-[250px] flex items-center justify-evenly">
               <li>Copyright {date.getFullYear()} Spotler</li>
               <li>|</li>
-              <li><Link href="https://spotler.co.uk/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="https://spotler.co.uk/privacy-policy" target="_blank">Privacy Policy</Link></li>
             </ul>
           </nav>
         </div>
