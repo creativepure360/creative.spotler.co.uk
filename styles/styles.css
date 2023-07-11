@@ -94,22 +94,14 @@ p {
 }
 
 /* Blog-specific */
+.post a {
+  @apply text-[#23afe6] underline;
+}
 
 .post figure {
-  margin: 40px 0;
+  @apply my-[40px];
 }
 
 .post code {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-left: 5px solid #23afe6;
-  color: #666;
-  page-break-inside: avoid;
-  font-family: monospace;
-  line-height: 1.5;
-  margin-bottom: 10px;
-  overflow: auto;
-  padding: 15px 20px;
-  display: block;
-  word-wrap: break-word;
+  @apply bg-white border-[1px] border-solid border-[#dddddd] border-l-[5px] border-l-[#23afe6] text-[#666] mb-[10px] leading-[1.5] font-mono overflow-auto py-[15px] px-[20px] break-inside-avoid block break-words;
 }
