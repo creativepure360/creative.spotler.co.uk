@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import groq from "groq";
 import client from "../../client-config";
@@ -25,7 +26,15 @@ const Product = ({ product }) => {
       <div className="bg-white">
         <section className="max-w-[1200px] mx-auto py-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] sm:gap-[60px] items-center">
           <motion.article className="col-span-1 sm:col-span-8 text-[#002a4d]" variants={childrenVariants}>
-            <span className="block font-greycliff text-[#23afe6] text-[16px] leading-[1] mb-[10px]">{category}</span>
+            <p className="inline-block mb-[30px] text-[#002a4d]">
+              <Link className="text-[#23afe6]" href={`/`} scroll={false}>
+                {category}
+              </Link>
+              <svg className="fill-[#23afe6] w-[8px] inline mx-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+              </svg>
+              {name}
+            </p>
             <h1>{name}</h1>
             <BlockContent blocks={description} />
           </motion.article>
