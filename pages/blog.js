@@ -23,7 +23,7 @@ const Blog = ({ blogPosts, page }) => {
       </div>
       <div className="bg-[#e6f6fc]">
         <section className="max-w-[1200px] mx-auto pt-[50px] pb-[50px] px-[30px] grid grid-cols-1 sm:grid-cols-12 gap-[30px] items-center">
-          {blogPosts.map(({ id, image, date, title, exerpt, slug, platform }) => (
+          {blogPosts.map(({ id, image, date, title, slug, platform }) => (
             <motion.article key={id} className="col-span-1 sm:col-span-4 h-full" variants={childrenVariants}>
               <div className="bg-white text-center hover:translate-y-[-10px] transition duration-300 h-full">
                 <Link href={`/post/${slug}`} scroll={false}>
@@ -59,7 +59,6 @@ export const getStaticProps = async () => {
       image,
       date,
       title,
-      exerpt,
       "slug": slug.current,
       platform[] -> {name}
     }`
