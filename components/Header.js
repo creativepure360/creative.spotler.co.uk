@@ -108,7 +108,7 @@ const Header = () => {
               />
             </svg>
           </Link>
-          <Link className="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="mailto:accountmanagers@spotler.co.uk?cc=creative-pure360@spotler.co.uk&subject=Creative%20services%20enquiry" scroll={false}>
+          <Link className="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="mailto:accountmanagers@spotler.co.uk?cc=creative@spotler.co.uk&subject=Creative%20services%20enquiry" scroll={false}>
             Get in touch
           </Link>
         </div>
