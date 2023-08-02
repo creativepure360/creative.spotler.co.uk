@@ -6,20 +6,8 @@ import BlockContent from "@sanity/block-content-to-react";
 import { urlFor } from "../../utils/image-url";
 import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
-import FsLightbox from "fslightbox-react";
 
 const Product = ({ product }) => {
-  const [lightboxController, setLightboxController] = useState({
-    toggler: false,
-    slide: 1,
-  });
-
-  const openLightboxOnSlide = (number) => {
-    setLightboxController({
-      toggler: !lightboxController.toggler,
-      slide: number,
-    });
-  };
   const [{ name, description, image, category, examples }] = product;
   return (
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
@@ -53,11 +41,12 @@ const Product = ({ product }) => {
               const url = urlFor(example).url();
               return (
                 <motion.article key={index} className="col-span-11 sm:col-span-3" variants={childrenVariants}>
-                  <div className={`bg-top bg-no-repeat bg-cover pt-[100%] cursor-pointer`} style={{ backgroundImage: `url(${url})` }} onClick={() => openLightboxOnSlide(index + 1)} />
+                  <a data-fslightbox data-type="image" data-caption={`<a class="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="mailto:accountmanagers@spotler.co.uk?cc=creative@spotler.co.uk&subject=Creative%20services%20enquiry&body=Product%3A%20${url}">I like this one!</a>`} href={url}>
+                    <div className={`bg-top bg-no-repeat bg-cover pt-[100%] cursor-pointer`} style={{ backgroundImage: `url(${url})` }} />
+                  </a>
                 </motion.article>
               );
             })}
-            <FsLightbox type="image" toggler={lightboxController.toggler} sources={examples.map((example) => urlFor(example).url())} slide={lightboxController.slide} />
           </section>
         </div>
       )}
