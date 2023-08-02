@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import "../styles/styles.css";
 
 import Header from "../components/Header";
@@ -12,6 +13,7 @@ const App = ({ Component, pageProps, router }) => {
         <Component {...pageProps} />
       </Main>
       <Footer />
+      <Script src="/js/fslightbox.js" />
     </>
   );
 };
