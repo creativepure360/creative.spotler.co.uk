@@ -41,7 +41,7 @@ const Product = ({ product }) => {
               const url = urlFor(example).url();
               return (
                 <motion.article key={index} className="col-span-11 sm:col-span-3" variants={childrenVariants}>
-                  <a data-fslightbox data-type="image" data-caption={`<a class="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="mailto:accountmanagers@spotler.co.uk?cc=creative@spotler.co.uk&subject=Creative%20services%20enquiry&body=Product%3A%20${url}">I like this one!</a>`} href={url}>
+                  <a data-fslightbox data-type="image" data-caption={`<a class="font-opensans text-[14px] sm:text-[18px] leading-[22.4px] sm:leading-[28.8px] font-bold text-[#002a4d] bg-[#f3e400] hover:bg-[#002a4d] hover:text-[#23afe6] rounded-3xl inline-block select-none px-[15px] sm:px-[25px] py-[6px] sm:py-[9px] duration-300 ease-in-out" href="mailto:accountmanagers@spotler.co.uk?cc=creative@spotler.co.uk&subject=Creative%20services%20enquiry&body=I'm%20interested%20in%20${url}">I like this one!</a>`} href={url}>
                     <div className={`bg-top bg-no-repeat bg-cover pt-[100%] cursor-pointer`} style={{ backgroundImage: `url(${url})` }} />
                   </a>
                 </motion.article>
