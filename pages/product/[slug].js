@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useState } from "react";
 import groq from "groq";
+import { useEffect } from "react";
 import client from "../../client-config";
 import BlockContent from "@sanity/block-content-to-react";
 import { urlFor } from "../../utils/image-url";
@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 import { childrenVariants, parentVariants } from "../../variants/variants";
 
 const Product = ({ product }) => {
+  useEffect(() => {
+    refreshFsLightbox();
+  }, [])
   const [{ name, description, image, category, examples }] = product;
   return (
     <motion.div initial="hidden" animate="visible" variants={parentVariants}>
