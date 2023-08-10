@@ -54,7 +54,7 @@ export const getStaticProps = async () => {
     }`
   );
   const blogPosts = await client.fetch(
-    groq`*[_type == "post"] {
+    groq`*[_type == "post"] | order(date desc) {
       "id": _id,
       image,
       date,
