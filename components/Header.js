@@ -39,7 +39,7 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header className={`w-full fixed top-0 ${backgroundColor ? "bg-[#23afe6] hover:bg-[#ffffff]" : "bg-[#ffffff]"} z-[1] transition-all duration-300`}>
+      <header className={`w-full fixed top-0 ${backgroundColor ? "bg-[#23afe6] hover:bg-white" : "bg-white"} z-[1] transition-all duration-300`}>
         <div className="h-[100px] flex items-center justify-between pr-[90px] pl-[30px]">
           <Link href={`/`} scroll={false}>
             <svg className="w-[128px] sm:w-[156px] duration-300 ease-in-out" fill="#002A4D" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 128 37">
