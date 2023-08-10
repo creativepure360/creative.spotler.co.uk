@@ -20,7 +20,9 @@ const Post = ({ post }) => {
                 <Link className="text-[#23afe6]" href={`/blog`} scroll={false}>
                   Blog
                 </Link>
-                <svg className="fill-[#23afe6] w-[8px] inline mx-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                <svg className="fill-[#23afe6] w-[8px] inline mx-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                </svg>
                 {title}
               </p>
             </motion.article>
@@ -32,6 +34,11 @@ const Post = ({ post }) => {
               <h1 className="text-[#002a4d]">{title}</h1>
               <span className="block text-[14px] leading-[1] text-[#002a4d] mb-[30px]">{date}</span>
               <BlockContent blocks={copy} />
+            </motion.article>
+            <motion.article className="text-center pt-[50px]" variants={childrenVariants}>
+              <Link className="font-opensans text-[18px] leading-[28.8px] font-bold duration-300 ease-in-out text-white hover:text-[#23afe6] bg-[#23afe6] hover:bg-white rounded-3xl inline-block select-none px-[25px] py-[9px]" href="/blog" scroll={false}>
+                Read more posts
+              </Link>
             </motion.article>
           </section>
         </div>
