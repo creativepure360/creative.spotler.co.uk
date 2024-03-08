@@ -60,7 +60,6 @@ export const getStaticProps = async () => {
   );
   return {
     props: { page, tools },
-    revalidate: 1,
   };
 };
 
