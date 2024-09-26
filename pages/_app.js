@@ -10,9 +10,9 @@ const App = ({ Component, pageProps, router }) => {
   return (
     <>
       <Head>
-        <title>Spotler Creative Playground</title>
+        <title>Spotler Creative</title>
         <meta name="description" content="Find a broad array of projects we've completed, blog containing how-to guides and useful tips in using our email editors, and tools we've developed to help you with your email marketing." />
-        <meta property="og:title" content="Spotler Creative Playground" />
+        <meta property="og:title" content="Spotler Creative" />
         <meta property="og:description" content="Find a broad array of projects we've completed, blog containing how-to guides and useful tips in using our email editors, and tools we've developed to help you with your email marketing." />
         <meta property="og:url" content="https://creative.spotler.co.uk/" />
         <meta property="og:type" content="website" />
