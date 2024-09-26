@@ -173,9 +173,6 @@ const Header = () => {
           <Link className="font-greycliff text-[#23afe6] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#002a4d] transition duration-300" href={`/blog`} onClick={() => setIsOpen(false)}>
             Blog
           </Link>
-          <Link className="font-greycliff text-[#23afe6] text-[35px] leading-[38.5px] font-bold mb-4 hover:text-[#002a4d] transition duration-300" href={`/tools`} onClick={() => setIsOpen(false)}>
-            Tools
-          </Link>
         </Nav>
       </header>
     </>
